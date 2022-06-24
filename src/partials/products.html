@@ -3,12 +3,13 @@
         <p class="section-products__label">100% natural</p>
         <h2 class="section-products__title">products</h2>
         <ul class="list products">
-            <li class="products__item products__item--cream">
+            <li class="products__item products__item--cream" data-menu>
                 <h3 class="products__title">ice cream</h3>
                 <p class="products__text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis. 
                 </p>
-                <button class="products__button" type="button">
+                <button class="products__button" type="button" aria-expanded="false" aria-controls="mobile-menu"
+                    data-menu-button>
                     <svg class="products__icon" width="15" height="15">
                         <use href="./images/svg/info.svg#icon-info"></use>
                     </svg>
@@ -39,3 +40,5 @@
         </ul>
     </div>
 </section>
+
+<script src="./js/products.js"></script>

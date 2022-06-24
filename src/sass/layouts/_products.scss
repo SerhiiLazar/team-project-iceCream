@@ -151,12 +151,33 @@
         border-radius: 50%;
 
         cursor: pointer;
+        transform: scale(1);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
+
+        &__button:hover,
+        &__button:focus, {
+            transform: scale(1.5);
+        }
 
     &__icon {
         fill: #D41443;
     }
 }
+
+
+.products__button:hover .products__item {
+    transform: perspective(400px) rotateY(-180deg);
+}
+
+
+.products__item {
+    transform: perspective(400px) rotateY(0deg);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
 
 
 
