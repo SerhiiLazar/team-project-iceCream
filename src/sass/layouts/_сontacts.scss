@@ -1,0 +1,232 @@
+.section.contacts {
+    // outline: 1px solid darkorange;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    
+    background-image: linear-gradient(
+        to bottom,
+    #ffffff 27%,
+    rgba(255, 245, 246, 1) 27%
+    );
+
+    @include mq(tablet) {
+        background-image: linear-gradient(
+        to bottom,
+        #ffffff 51%,
+        rgba(255, 245, 246, 1) 51%
+    );
+    
+    }
+    
+    @include mq(desktop) {
+        background-image: linear-gradient(
+        to bottom,
+        #ffffff 28%,
+        rgba(255, 245, 246, 1) 28%
+    );
+    
+        
+    
+    }
+    
+}
+    
+.contacts__list {
+    margin: -10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    
+    @include mq(tablet) {
+        margin: -16px;
+    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+    
+    }
+    
+    @include mq(desktop) {
+    
+            // display: flex;
+            // flex-wrap: nowrap;
+    
+    }
+}
+    
+.contacts__item {
+    margin: 10px;
+    padding: 40px 32px;
+        // outline: 1px solid red;
+    width: 100%;
+    max-width: 280px;
+    background-color: #fff;
+    
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+    
+    @include mq(tablet) {
+        max-width: 224px;
+        margin: 16px;
+    
+            // &:nth-child(odd) {
+            //     margin-right: 30px;
+            // }
+    
+            // &:nth-child(-n+2) {
+            //     margin-bottom: 30px;
+            // }
+        flex-basis: calc((100% - 3*10px)/3);
+    
+    }
+
+        @include mq(desktop) {
+            max-width: 368px;
+        }
+        
+    }
+    
+    .uptitle-cafe {
+        margin-bottom: 20px;
+    
+        height: auto;
+        width: 80px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        background: #F0D1A5;
+        border-radius: 4px;
+    }
+    
+    .uptitle-foodtrack {
+        margin-bottom: 20px;
+    
+        height: auto;
+        width: 130px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        background: #C2E297;
+        border-radius: 4px;
+    }
+    
+    .adress-card__uptitle {
+       
+        
+        color: #fff;
+    
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.86;
+    
+    
+        
+        letter-spacing: 0.04em;
+    }
+    
+    .adress-card__title {
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.86;
+
+        margin-bottom: 8px;
+    
+    
+        letter-spacing: 0.04em;
+    }
+    
+    .adress-card__subtitle {
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.5;
+    
+    
+        color: #907E82;
+    }
+    
+    .adress-card__link {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .location {
+        padding-bottom: 32px;
+        // outline: 1px solid orangered;
+        border-bottom: 1px solid #E1E1E1;
+    }
+
+    .adress-card__schedule {
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        border-bottom: 1px solid #E1E1E1;
+    }
+    
+    .schedule__period {
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.86;
+    }
+    
+    .schedule__time {
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.86;
+    
+        color: #FFA5BA;
+    }
+
+    .schedule__weekdays {
+        margin-bottom: 12px;
+    }
+    
+    .adress-card__link {
+        padding-top: 32px;
+    }
+
+    .adress-card__link--phone {
+        text-decoration: none;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.5;
+    
+        color: #907E82;
+    
+        &:hover,
+        &:focus {
+            color: #D41443;
+        }
+    }
+    
+    .adress-card__link--mail {
+        text-decoration: none;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.5;
+    
+        color: #907E82;
+    
+        &:hover,
+        &:focus {
+            color: #D41443;
+        }
+    }
