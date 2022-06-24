@@ -1,0 +1,62 @@
+.about {
+    padding-top: 60px;
+    padding-bottom: 40px;
+
+    background-color: rgba(255, 245, 246, 1);
+
+    &__description {
+        text-align: start;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.62;
+    }
+
+    &__description--grey {
+        margin-bottom: 20px;
+
+        text-align: start;
+        font-size: 12px;
+        line-height: 1.62;
+
+        color: rgba(144, 126, 130, 1);
+        background-image: url(../images/about/about-bg.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &__thumb {
+        margin-bottom: 40px;
+    }
+}
+
+.about-button {
+    display: inline-flex;
+    align-items: center;
+    padding-left: 37px;
+    padding-right: 38px;
+    width: 176px;
+    height: 44px;
+
+    font-weight: 700;
+    line-height: 1.29;
+
+    color: rgba(212, 20, 67, 1);
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 22px;
+
+    &__icon{
+        margin-left: auto;
+        background-image: url(../images/svg/vector-rigth.svg);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        color: rgba(212, 20, 67, 1);
+        width: 9px;
+        height: 13px;
+    }
+}
+
+
+
+.about .title, .about .subtitle {
+    text-align: center;
+}
