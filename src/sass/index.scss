@@ -1,2 +1,25 @@
-@import './common';
-@import './example';
+/* Utils */
+@import './utils/vars';
+@import './utils/normalize';
+@import './utils/visually-hidden';
+@import './utils/mixins';
+
+/* Base styles*/
+@import './base/common';
+@import './base/reset';
+@import './base/container';
+@import './base/js-selectors';
+
+/* Components */
+@import './components/btn';
+@import './components/menu';
+
+/* layuots */
+@import './layouts/header';
+@import './layouts/products';
+@import './layouts/about';
+@import './layouts/advantages';
+@import './layouts/gallery';
+@import './layouts/customer-reviews';
+@import './layouts/сontacts';
+@import './layouts/footer';
