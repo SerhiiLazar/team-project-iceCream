@@ -1,21 +1,37 @@
 
 // section HERO 
 .hero {
-    min-width: 320px;
-    width: 100%;
+    background-color: rgba(255, 184, 202, 1);
+    overflow: hidden;
+}
+.hero__wrapper {
 
+    
+    
+    width: 100%;
     padding-top: 194px;
     padding-bottom: 158px;
 
     position: relative;
 
     z-index: 5;
-    overflow: hidden;
     
-    background-color: rgba(255, 184, 202, 1);
+   
+    // @include mq(mobile) {
+    //     max-width: none;
+    //     width: 320px;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    // }
+    @include mq(mobile-only) {
+        width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
 }
 
-.hero__wrapper {
+.hero__content {
     position: relative;
     z-index: 10;
 }
@@ -87,13 +103,42 @@
     left: 0;
     z-index: 0;
     &--eclips {
-        width: 346px;
+        width: 284px;
+        height: 344px;
         top: 83px;
         left: 36px;
-        
+        animation-name: eclips;
+        animation-duration: 0.9s;
+        animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
     &--ice {
         top: 92px;
         left: 117px;
+        animation-name: ice;
+        animation-duration: 0.9s;
+        animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        
     }
 }
+
+@keyframes eclips {
+    0% {
+      transform: translateX(100%);
+    }
+    
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes ice {
+    0% {
+      transform: translateY(100%);
+      
+    }
+    
+    100% {
+      transform: translateY(0);
+      
+    }
+  }
