@@ -26,6 +26,7 @@
 display: flex;
 flex-direction: column;
 
+margin-right: 70px;
 margin-bottom: 32px;
 
 &:last-child {
@@ -124,16 +125,19 @@ background-size: cover;}
     }
 }
 
-.advantages-list-__p-like {
+.advantages-list__p-like {
     color: rgba(0, 0, 0, 1);
     font-family: DM Sans,sans-serif;
     font-weight: 700;
     font-size: 12px;
     line-height: 1.67;
 
+    padding-right: 20px;
+
     @include mq(tablet) {
         font-size: 14px;
         line-height: 1.71;
+        padding-right: 0px;
     }
 
     @include mq(desktop) {
