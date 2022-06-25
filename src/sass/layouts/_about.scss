@@ -16,7 +16,7 @@
     }
 
     &__description--grey {
-        max-width: 220px;
+        max-width: 221px;
         margin-right: auto;
         text-align: start;
         font-size: 12px;
@@ -42,9 +42,16 @@
         background-image: url(../images/about/about-bg.png);
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: 0 40%;
+        background-position: 0 38%;
     }
 }
+
+.bg-cow {
+    background-image: url(../images/about/cow_280.png);
+    background-size: 280px 279px;
+    height: 279px;
+}
+
 
 .about-button {
     display: flex;
