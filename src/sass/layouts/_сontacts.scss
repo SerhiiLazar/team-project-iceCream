@@ -2,11 +2,11 @@
     // outline: 1px solid darkorange;
     padding-top: 120px;
     padding-bottom: 120px;
-    
-    background-image: linear-gradient(
-        to bottom,
-    #ffffff 27%,
-    rgba(255, 245, 246, 1) 27%
+
+    background-image: radial-gradient(
+        circle at bottom center,
+        rgba(255, 245, 246, 1) 73%,
+        #ffffff 73%
     );
 
     @include mq(tablet) {
@@ -83,11 +83,11 @@
     
     }
 
-        @include mq(desktop) {
-            max-width: 368px;
-        }
-        
+    @include mq(desktop) {
+        max-width: 368px;
     }
+        
+}
     
     .uptitle-cafe {
         margin-bottom: 20px;
@@ -230,3 +230,58 @@
             color: #D41443;
         }
     }
+
+.cont-btn {
+    margin-top: 32px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include mq(tablet) {
+       flex-direction: row;
+    }
+
+    @include mq(desktop) {
+        
+    }
+}
+
+.cont-btn__location {
+    margin-bottom: 10px;
+
+
+    @include mq(tablet) {
+    
+    }
+
+    @include mq(desktop) {
+        
+    }
+
+    & .cont-btn__title {
+        font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+    background-color: #D41342;
+    border-radius: 22px;
+    }
+}
+
+
+.cont-btn__franchise {
+    @include mq(tablet) {
+    
+    }
+
+    @include mq(desktop) {
+        
+    }
+}
