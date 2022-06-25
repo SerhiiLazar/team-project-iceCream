@@ -1,0 +1,91 @@
+.advantages-section {
+    padding-top: none;
+    background-color: rgba(255, 245, 246, 1);
+}
+
+.advantages-container {
+
+}
+
+.advantages-list {
+    display: block;
+
+    @include mq(tablet) {}
+
+    @include mq(mobile-only) {}
+
+}
+
+.advantages-item {
+display: flex;
+flex-direction: column;
+}
+
+
+.advantages-item__meta {
+text-align: start;
+}
+
+.advantages-list__h3-like-cow-check {
+&::before {
+    width: 33px;
+    height: 50px;
+    margin-bottom: 16px;
+    content: "";
+
+    background-image: url(../images/png-advantages/cow-check@1x.png);
+    background-size: cover;
+}
+}
+
+.advantages-list__h3-like-appels {
+    &::before {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 16px;
+        content: "";
+    
+        background-image: url(../images/png-advantages/appels@1x.png);
+        background-size: cover;
+    }
+}
+
+
+.advantages-list__h3-like-heard {
+    &::before {
+        width: 44px;
+        height: 50px;
+        margin-bottom: 16px;
+        content: "";
+    
+        background-image: url(../images/png-advantages/heard@1x.png);
+        background-size: cover;
+    }
+}
+
+.advantages-list__h3-like {
+    color: rgba(212, 20, 67, 1);
+    font-family: Titan One,sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    font-size: 36px;
+    line-height: 1.14;
+
+    margin-bottom: 20px;
+
+    @include mq(tablet) {}
+
+    @include mq(mobile-only) {}
+}
+
+.advantages-list-__p-like {
+    color: rgba(0, 0, 0, 1);
+    font-family: DM Sans,sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.67;
+
+    @include mq(tablet) {}
+
+    @include mq(mobile-only) {}
+}
