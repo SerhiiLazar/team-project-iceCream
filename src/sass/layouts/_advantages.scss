@@ -3,10 +3,6 @@
     background-color: rgba(255, 245, 246, 1);
 }
 
-.advantages-container {
-
-}
-
 .advantages-list {
     display: block;
 
@@ -19,49 +15,41 @@
 .advantages-item {
 display: flex;
 flex-direction: column;
-}
 
+margin-bottom: 32px;
+
+&:last-child {
+    margin-bottom: 0px;}
+}
 
 .advantages-item__meta {
 text-align: start;
-}
 
-.advantages-list__h3-like-cow-check {
 &::before {
-    width: 33px;
+    display: block;
+    
     height: 50px;
     margin-bottom: 16px;
-    content: "";
+    content: "";}
 
-    background-image: url(../images/png-advantages/cow-check@1x.png);
-    background-size: cover;
-}
-}
-
-.advantages-list__h3-like-appels {
-    &::before {
-        width: 50px;
-        height: 50px;
-        margin-bottom: 16px;
-        content: "";
-    
-        background-image: url(../images/png-advantages/appels@1x.png);
-        background-size: cover;
-    }
-}
+&-cow-check::before {
+width: 33px;
+background-image: url(../images/png-advantages/cow-check@1x.png);
+background-size: cover;}
 
 
-.advantages-list__h3-like-heard {
-    &::before {
-        width: 44px;
-        height: 50px;
-        margin-bottom: 16px;
-        content: "";
-    
-        background-image: url(../images/png-advantages/heard@1x.png);
-        background-size: cover;
-    }
+&-appels::before {
+width: 50px;
+background-image: url(../images/png-advantages/appels@1x.png);
+background-size: cover;}
+
+&-heard::before {
+width: 46px;
+background-image: url(../images/png-advantages/heard@1x.png);
+background-size: cover;}
+
 }
+
 
 .advantages-list__h3-like {
     color: rgba(212, 20, 67, 1);
