@@ -1,10 +1,25 @@
-.hero {
-    max-width: 320px;
-    padding-top: 58px;
+header {
     background-color: rgba(255, 184, 202, 1);
+   
+
+}
+
+
+// section HERO 
+.hero {
+    min-width: 320px;
+    width: 100%;
+    position:relative;
+}
+
+.hero__wrapper {
+    padding-top: 194px;
+    padding-bottom: 158px;
 }
 
 .hero__title {
+    width: 218px;
+    
     font-family: 'Titan One';
     font-style: normal;
     font-weight: 400;
@@ -21,6 +36,32 @@
         line-height: 0.95;
 
         color: rgba(212, 20, 67, 1);
+    }
+}
 
+.hero__list {
+    display: flex;
+}
+
+
+.hero__link {
+    
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    padding: 7px 15px;
+    background-color: rgba(212, 20, 67, 1);
+    border-radius: 20px;
+
+    color: #FFFFFF;
+    &--white {
+        color: rgba(212, 20, 67, 1);
+        background-color: rgba(255, 255, 255, 1);
     }
 }
