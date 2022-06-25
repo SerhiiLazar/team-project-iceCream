@@ -1,15 +1,25 @@
 .advantages-section {
     padding-top: none;
     background-color: rgba(255, 245, 246, 1);
+    
+    margin-bottom: 60px;
+
+    @include mq(tablet) {
+        margin-bottom: 64px;
+    }
+
+    @include mq(desktop) {
+        margin-bottom: 120px;
+    }
 }
 
 .advantages-list {
     display: block;
 
-    @include mq(tablet) {}
-
-    @include mq(mobile-only) {}
-
+    @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    }
 }
 
 .advantages-item {
@@ -19,7 +29,25 @@ flex-direction: column;
 margin-bottom: 32px;
 
 &:last-child {
-    margin-bottom: 0px;}
+    margin-bottom: 0px;
+
+    @include mq(tablet) {
+        margin-right: 0px;}
+}
+
+@include mq(tablet) {
+    margin-bottom: 0px;
+    margin-right: 20px;
+
+    width: calc((100% - 3*20px)/3);
+}
+
+@include mq(desktop) {
+    margin-right: 80px;
+
+    width: calc((100% - 3*80px)/3);
+}
+        
 }
 
 .advantages-item__meta {
@@ -30,18 +58,37 @@ text-align: start;
     
     height: 50px;
     margin-bottom: 16px;
+    
+    @include mq(tablet) {
+    margin-bottom: 36px; 
+    }
+
+    @include mq(desktop) {
+        margin-bottom: 40px; 
+    }
+
     content: "";}
 
 &-cow-check::before {
 width: 33px;
 background-image: url(../images/png-advantages/cow-check@1x.png);
-background-size: cover;}
+background-size: cover;
+
+@include mq(retina) {
+    background-image: url(../images/png-advantages/cow-check@2x.png);
+} 
+}
 
 
 &-appels::before {
 width: 50px;
 background-image: url(../images/png-advantages/appels@1x.png);
-background-size: cover;}
+background-size: cover;
+
+@include mq(retina) {
+    background-image: url(../images/png-advantages/appels@2x.png);
+}
+}
 
 &-heard::before {
 width: 46px;
@@ -61,9 +108,20 @@ background-size: cover;}
 
     margin-bottom: 20px;
 
-    @include mq(tablet) {}
+    @include mq(tablet) {
+        font-size: 48px;
+        line-height: 1.13;
 
-    @include mq(mobile-only) {}
+        margin-bottom: 13px;
+    }
+
+    @include mq(desktop) {
+        font-size: 58px;
+        line-height: 1.17;
+
+        margin-bottom: 16px;
+
+    }
 }
 
 .advantages-list-__p-like {
@@ -73,7 +131,13 @@ background-size: cover;}
     font-size: 12px;
     line-height: 1.67;
 
-    @include mq(tablet) {}
+    @include mq(tablet) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 
-    @include mq(mobile-only) {}
+    @include mq(desktop) {
+        font-size: 16px;
+        line-height: 1.75;
+    }
 }
