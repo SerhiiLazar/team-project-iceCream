@@ -72,10 +72,8 @@
     }
 
     &__icon{
+        // display: block;
         margin-left: auto;
-        background-image: url(../images/svg/vector-rigth.svg);
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
         color: rgba(212, 20, 67, 1);
         min-width: 9px;
         min-height: 13px;
