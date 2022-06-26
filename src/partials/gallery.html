@@ -1,4 +1,5 @@
 <section class="gallery container">
+  <h2 class="visually-hidden gallery__title">Pictures of our ice cream</h2>
   <div class="gallary__grid">
     <div class="gallery__container gallery__container--1">
       <div class="gallery__box gallery__box--1">
@@ -251,7 +252,6 @@
       </div>
       <div class="gallery__box gallery__box--9">
         <picture>
-          <picture>
           <source
             media="(min-width: 320px)"
             srcset="
@@ -284,7 +284,6 @@
     <div class="gallery__container gallery__container--6">
       <div class="gallery__box gallery__box--10">
         <picture>
-          <picture>
           <source
             media="(min-width: 320px)"
             srcset="
@@ -315,5 +314,30 @@
       </div>
     </div>
   </div>
-  <div class="gallery__card">Taste heavenly on earth!</div>
+  <div class="gallery__card">
+    <div class="gallery__circle"></div>
+    <!-- Нужно будет изменить путь на картинку в Хедере для экономии трафика. -->
+    <picture>
+      <source
+        media="(min-width: 320px)"
+        srcset="
+          ./images/gallery/png/slider-pic7_1.png    1x,
+          ./images/gallery/png/slider-pic7_1@2x.png 2x,
+          ./images/gallery/png/slider-pic7_1@3x.png 3x
+        "
+        type="image/png"
+      />
+      <img
+        class="gallery__png"
+        src="./images/gallery/png/slider-pic7_1.png"
+        alt="Ice-cream"
+        max-width:
+        50px;
+        max-height:
+        120px;
+        loading="lazy"
+      />
+    </picture>
+    <p class="gallery__card-text">Taste heavenly on earth!</p>
+  </div>
 </section>
