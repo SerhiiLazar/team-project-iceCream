@@ -4,6 +4,13 @@
 
     background-color: rgba(255, 245, 246, 1);
 
+    &__cow-image-wrapper {
+        max-width: 280px;
+        max-height: 279px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     &__description {
         max-width: 220px;
         margin-right: auto;
@@ -47,11 +54,19 @@
 }
 
 .bg-cow {
-    background-image: url(../images/about/cow_280.png);
-    background-size: 280px 279px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 280px;
     height: 279px;
-}
+    background-position: center;
+    background-image: url(../images/about/cow_280.png);
 
+    @include mq(retina){
+        background-image: url(../images/about/cow_560.png);;
+    }
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .about-button {
     display: flex;
