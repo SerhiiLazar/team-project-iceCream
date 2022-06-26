@@ -44,12 +44,11 @@
     }
 
 }
+
 .products {
     @include mq(tablet) {
             display: flex;        
     }
-
-
 
     &__item {
         display: flex;
@@ -72,13 +71,22 @@
         max-width: 280px;
         
         @include mq(tablet) {
-            width: calc((100% - 32px) / 3);
-            
-            &__item:not(:last-child) {
-                margin-right: 16px;
-            }            
+            width: calc((100% - 32px) / 3);                                    
         }
-    }    
+    }
+    
+    &__item {
+        @include mq(tablet) {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+
+    &__item:not(:last-child) {
+        @include mq(tablet) {            
+            margin-right: 16px;
+        }
+    }
     
     &__title {
        display: block;       
