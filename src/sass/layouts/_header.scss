@@ -1,3 +1,37 @@
+.header {
+    position: fixed;
+    top:0;
+    left:0;
+
+    display: flex;
+    width: 100vw;
+    z-index: 2;
+
+    
+
+    &__container {
+
+        display: flex;
+        height: 66px;
+        background-color: transparent;
+
+        padding-top: 12px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        width: 100vw;
+        
+
+    }
+}
+
+
+.burger__button {
+    margin-left: auto;
+    padding: 0;
+    background-color: transparent;;
+
+}
 
 // section HERO 
 .hero {
