@@ -1,0 +1,147 @@
+.advantages-section {
+    padding-top: none;
+    background-color: rgba(255, 245, 246, 1);
+    
+    margin-bottom: 60px;
+
+    @include mq(tablet) {
+        margin-bottom: 64px;
+    }
+
+    @include mq(desktop) {
+        margin-bottom: 120px;
+    }
+}
+
+.advantages-list {
+    display: block;
+
+    @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    }
+}
+
+.advantages-item {
+display: flex;
+flex-direction: column;
+
+margin-right: 70px;
+margin-bottom: 32px;
+
+&:last-child {
+    margin-bottom: 0px;
+
+    @include mq(tablet) {
+        margin-right: 0px;}
+}
+
+@include mq(tablet) {
+    margin-bottom: 0px;
+    margin-right: 20px;
+
+    width: calc((100% - 3*20px)/3);
+}
+
+@include mq(desktop) {
+    margin-right: 80px;
+
+    width: calc((100% - 3*80px)/3);
+}
+        
+}
+
+.advantages-item__meta {
+text-align: start;
+
+&::before {
+    display: block;
+    
+    height: 50px;
+    margin-bottom: 16px;
+    
+    @include mq(tablet) {
+    margin-bottom: 36px; 
+    }
+
+    @include mq(desktop) {
+        margin-bottom: 40px; 
+    }
+
+    content: "";}
+
+&-cow-check::before {
+width: 33px;
+background-image: url(../images/png-advantages/cow-check@1x.png);
+background-size: cover;
+
+@include mq(retina) {
+    background-image: url(../images/png-advantages/cow-check@2x.png);
+} 
+}
+
+
+&-appels::before {
+width: 50px;
+background-image: url(../images/png-advantages/appels@1x.png);
+background-size: cover;
+
+@include mq(retina) {
+    background-image: url(../images/png-advantages/appels@2x.png);
+}
+}
+
+&-heard::before {
+width: 46px;
+background-image: url(../images/png-advantages/heard@1x.png);
+background-size: cover;}
+
+}
+
+
+.advantages-list__h3-like {
+    color: rgba(212, 20, 67, 1);
+    font-family: Titan One,sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    font-size: 36px;
+    line-height: 1.14;
+
+    margin-bottom: 20px;
+
+    @include mq(tablet) {
+        font-size: 48px;
+        line-height: 1.13;
+
+        margin-bottom: 13px;
+    }
+
+    @include mq(desktop) {
+        font-size: 58px;
+        line-height: 1.17;
+
+        margin-bottom: 16px;
+
+    }
+}
+
+.advantages-list__p-like {
+    color: rgba(0, 0, 0, 1);
+    font-family: DM Sans,sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.67;
+
+    padding-right: 20px;
+
+    @include mq(tablet) {
+        font-size: 14px;
+        line-height: 1.71;
+        padding-right: 0px;
+    }
+
+    @include mq(desktop) {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+}
