@@ -6,6 +6,10 @@
   line-height: 1.147;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+
+  .about & {
+    margin-bottom: 32px;
+  }
 }
 
 .subtitle {
@@ -14,4 +18,9 @@
   font-size: 18px;
   line-height: 1.153;
   text-transform: uppercase;
+
+  .about & {
+    margin-bottom: 15px;
+  }
+
 }
