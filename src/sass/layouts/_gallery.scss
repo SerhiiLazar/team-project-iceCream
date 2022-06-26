@@ -1,0 +1,115 @@
+.gallery {
+
+    position: relative;
+    margin: auto;
+    width: 320px;
+    height: auto;
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(255, 245, 246, 1) 20%,
+        rgba(255, 255, 255, 1) 20%,
+        rgba(255, 255, 255, 1) 80%
+
+    );
+}
+
+.gallary__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr 1fr;
+    grid-column-gap: 0.15em;
+}
+
+.gallery.container {
+    padding: 0;
+    
+}
+
+
+.gallery__container--1 {
+    padding-top: 45px;
+}
+
+.gallery__container--2 {
+    padding-top: 28px;
+}
+
+.gallery__container--4 {
+    padding-top: 31px;
+}
+
+.gallery__container--5 {
+    padding-top: 20px;
+}
+
+.gallery__container--6 {
+    padding-top: 49px;
+}
+
+.gallary__img {
+    border-radius: 18%;
+    box-shadow: none;
+}
+
+.gallery__box--bottom {
+    margin-bottom: 0.15em;
+}
+
+.gallery__card {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 101%;
+    border-radius: 10px;
+    padding: 40px 15px 40px 105px;
+    background-color: rgba(255, 184, 202, 1);
+
+   
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translate(-50%, -50%) scale(0.8);
+    transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery__card-text {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    text-transform: uppercase; 
+    color: rgba(255, 255, 255, 1);
+}
+.gallery__png{
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+    width: 50px;
+    height: 120px;
+}
+
+
+.gallery__circle {
+    position: absolute;
+    left: 5px;
+    bottom: 23px;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 165, 186, 1);
+    border-radius: 50%;
+}
+
+
+.gallery:hover .gallery__card,
+.gallery:focus .gallery__card {
+
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+   
+}
+
