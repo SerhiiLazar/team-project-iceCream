@@ -9,21 +9,24 @@
     background-color: rgba(255, 245, 246, 1);
 
     &__content {
+        @include mq(mobile-only){
+            &--bg-milk {
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: 0 69%;
+                background-image: url(../images/about/about-bg.png);
+    
+                @include mq(retina){
+                    background-image: url(../images/about/about-bg@2x.png);
+                }
+            }
+        }
         @include mq(tablet-only) {
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        &--bg-milk {
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: 0 69%;
-            background-image: url(../images/about/about-bg.png);
-
-            @include mq(retina){
-                background-image: url(../images/about/about-bg@2x.png);
-            }
-        }
+        
     }
 
     &__cow-image-wrapper {
