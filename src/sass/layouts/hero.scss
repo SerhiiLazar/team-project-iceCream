@@ -1,0 +1,223 @@
+// section HERO 
+.hero {
+    background-color: rgba(255, 184, 202, 1);
+    overflow: hidden;
+}
+.hero__wrapper {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 83px;
+    padding-bottom: 75px;
+
+    z-index: 15;
+    @include mq(tablet-only) {
+        display: flex;
+        justify-content: space-between;
+        max-width: 768px;
+        margin: 0 auto;
+        padding-top: 43px;
+        padding-bottom: 40px;
+    }
+   
+    // @include mq(mobile) {
+    //     max-width: none;
+    //     width: 320px;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    // }
+   
+    
+}
+
+.hero__content {
+    width: 218px;
+    position: absolute;
+    z-index: 15;
+    padding-top: 111px;
+    padding-bottom: 83px;
+
+    @include mq(tablet-only) {
+        width: 162px;
+        position: static;
+        padding-top: 65px;
+        padding-bottom: 0;
+    }
+}
+
+.hero__title {
+    
+    margin-bottom: 20px;
+    
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 1);
+
+    &--big {
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 0.95;
+
+        color: rgba(212, 20, 67, 1);
+    }
+}
+
+.hero__list {
+    display: flex;
+}
+
+.hero__item {
+    margin-left: 7.6px;
+    &:nth-child(1) {
+        margin-left: 0;
+    }
+}
+
+
+.hero__link {
+    
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    padding: 7px 15px;
+    background-color: rgba(212, 20, 67, 1);
+    border-radius: 20px;
+
+    color: #FFFFFF;
+    &--white {
+        color: rgba(212, 20, 67, 1);
+        background-color: rgba(255, 255, 255, 1);
+    }
+    &--white:hover,
+    &--white:focus {
+        background-color: rgba(236, 235, 235, 1);
+    }
+}
+
+.hero__eclipse {
+    width: 346px;
+    height: 344px;
+    border-radius: 50%;
+    background-color:rgba(255, 165, 186, 1);
+    z-index: 10;
+    margin-left: 15px;
+    position: relative;
+    animation-name: eclips;
+    animation-duration: 0.9s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include mq(tablet-only) {
+        width: 335px;
+        height: 333px;
+        margin-left: 54px;
+    }
+}
+
+.hero__images {
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 0;
+
+    &--ice {
+        top: 9px;
+        left: 81px;
+        animation-name: ice;
+        animation-duration: 0.9s;
+        animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        
+        @include mq(tablet-only) {
+            width: 143px;
+            height: 336px;
+            top: 37px;
+            left: 74px;
+        }
+    }
+}
+
+@keyframes eclips {
+    0% {
+      transform: translateX(100%);
+    }
+    
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes ice {
+    0% {
+      transform: translateY(100%);
+      
+    }
+    
+    100% {
+      transform: translateY(0);
+      
+    }
+  }
+
+
+.store {
+    display: none;
+
+    @include mq(tablet-only) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        padding-top: 49px;
+    }
+    &__block {
+        width: 43px;
+        height: 44px;
+        text-align: end;
+        position: relative;
+
+        &:nth-child(1) {
+            margin-bottom: 16px;
+        }
+    }
+    &__block--trucks {
+        width: 51px;
+        height: 43px;
+    }
+    &__block>span {
+        font-family: 'Titan One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 1.14;
+        text-align: right;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+
+        color: rgba(212, 20, 67, 1);
+
+    }
+
+    &__block>p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 10px;
+        text-align: right;
+
+        color: rgba(255, 255, 255, 1);
+
+
+    }
+}
+
