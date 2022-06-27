@@ -1,0 +1,305 @@
+.modal {    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    @media screen and (max-width: 479px) {
+        width: 90%;
+    }
+
+    @include mq(not-desktop) {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    max-width: 528px;
+    padding: 40px;
+
+    background-color: #FFA5BA;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 24px;
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(.4) rotate(-180deg);
+    opacity: 0;
+}
+
+.backdrop .modal {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    opacity: 1;
+}
+
+.modal-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+
+    cursor: pointer;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &__icon-close {
+        fill: #D41443;
+        transform: scale(1);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &:hover .modal-btn__icon-close,
+    &:focus .modal-btn__icon-close {
+        transform: scale(1.4);
+    }
+}
+
+.modal-form {
+    width: 100%;    
+
+    &__field {
+        display: block;
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    &__input {
+        margin: 0;
+        width: 100%;
+        height: 40px;
+        padding: 11px 12px;
+        padding-left: 42px;
+
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 1.52;
+        letter-spacing: 0.04em;
+    
+        color: #D41443;
+
+
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+
+        color: #D41443;
+
+        outline: transparent;
+
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__input--product {        
+        padding-left: 12px;        
+    }
+
+    &__option {
+        font-size: 14;
+    }
+    
+    &__field-icon {
+        position: relative;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+
+        fill: #D41443;
+
+        transform: scale(1) translateY(-30%);
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__input:focus+&__icon {
+        transform: scale(1.4) translateY(-30%);
+    }
+
+    &__input:focus {
+        border-color: #D41443;
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+
+        color: #FFFFFF;
+    }
+
+    &__textarea {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    &__comment {
+        width: 100%;
+        padding: 12px 16px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+
+        outline: transparent;
+
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__comment:focus {
+        border-color: #D41443;
+    }
+
+    &__comment::placeholder {
+        font-weight: 400;
+        font-size: 12px;
+
+        @include mq(not-desktop) {
+            font-size: 14px;
+        }
+
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
+
+    &__policy-group {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    &__checkbox-description {
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.52;
+        letter-spacing: 0.04em;
+
+        color: #FFFFFF;
+
+        @include mq(not-desktop) {
+            font-size: 12px;
+            line-height: 1.17;
+        }       
+    }
+
+    &__custom-checkbox {
+        width: 16px;
+        height: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-right: 7px;
+        border: 2px solid #D41443;
+        border-radius: 2px;
+
+        background-color: #FFFFFF;
+
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__custom-checkbox-icon {
+        opacity: 0;
+
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__checkbox:checked+&__custom-checkbox &__custom-checkbox-icon {
+        opacity: 1;
+    }
+
+    &__checkbox:checked+&__custom-checkbox {
+        background-color: #D41443;
+        border-color: #D41443;
+
+    }
+
+    &__checkbox {
+        -webkit-appearence: none;
+        -moz-appearance: none;
+
+        appearance: none
+    }
+
+    &__link {
+        color: #D41443;
+    }
+
+    &__field-btn {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__btn {
+        width: 200px;
+        height: 50px;
+
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.31;        
+    
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.06em;
+    
+        color: #D41443;
+    
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 24px;
+    
+        cursor: pointer;
+    
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__btn:focus,
+    &__btn:hover {
+        color: #FFFFFF;
+        background-color: #D41443;
+    }
+}
+
+.modal-title {
+    display: block;
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.1;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    margin-bottom: 12px;
+}
+
+textarea {
+    resize: none;
+    outline: transparent;
+}
+
