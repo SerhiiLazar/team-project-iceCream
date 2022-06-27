@@ -14,6 +14,16 @@
             align-items: center;
             justify-content: center;
         }
+        &--bg-milk {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 0 69%;
+            background-image: url(../images/about/about-bg.png);
+
+            @include mq(retina){
+                background-image: url(../images/about/about-bg@2x.png);
+            }
+        }
     }
 
     &__cow-image-wrapper {
@@ -63,20 +73,14 @@
         }
     }
 
-    &__bg-wrapper {
+    &__text-wrapper {
         @include mq(mobile-only) {
             display: block;
             max-width: 280px;
             margin-left: auto;
             margin-right: auto;
 
-            background-image: url(../images/about/about-bg.png);
-            @include mq(retina){
-                background-image: url(../images/about/about-bg@2x.png);
-            }
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: 0 29%;
+            
         }
 
         @include mq(tablet-only) {
