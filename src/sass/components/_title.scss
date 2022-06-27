@@ -7,9 +7,18 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
 
+// Section "ABOUT"
   .about & {
     margin-bottom: 32px;
     text-align: center;
+
+    @include mq(tablet){
+      margin-bottom: 40px;
+    }
+
+    @include mq(desktop) {
+      margin-bottom: 60px;
+    }
   }
 }
 
@@ -20,9 +29,13 @@
   line-height: 1.153;
   text-transform: uppercase;
 
+  // Section "ABOUT"
   .about & {
     margin-bottom: 15px;
     text-align: center;
-  }
 
+    @include mq(tablet){
+      margin-bottom: 16px;
+    }
+  }
 }

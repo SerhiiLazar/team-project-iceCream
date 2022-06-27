@@ -1,24 +1,32 @@
 .about {
     padding-top: 60px;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
 
     @include mq(tablet-only){
         padding-bottom: 60px;
     }
 
+    @include mq(desktop) {
+        background-image: url(../images/about/about-bg-desk.png);
+        background-repeat: no-repeat;
+        background-position: 0 84%;
+        background-size: contain;
+        @include mq(retina){
+            background-image: url(../images/about/about-bg-desk@2x.png);
+        }
+
+    }
     background-color: rgba(255, 245, 246, 1);
 
     &__content {
-        @include mq(mobile-only){
-            &--bg-milk {
-                background-repeat: no-repeat;
-                background-size: contain;
-                background-position: 0 69%;
-                background-image: url(../images/about/about-bg.png);
+        @include mq(mobile-only) {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 0 69%;
+            background-image: url(../images/about/about-bg.png);
     
-                @include mq(retina){
-                    background-image: url(../images/about/about-bg@2x.png);
-                }
+            @include mq(retina){
+                background-image: url(../images/about/about-bg@2x.png);
             }
         }
         @include mq(tablet-only) {
@@ -26,14 +34,11 @@
             align-items: center;
             justify-content: center;
         }
-        
-    }
-
-    &__cow-image-wrapper {
-        max-width: 280px;
-        max-height: 279px;
-        margin-left: auto;
-        margin-right: auto;
+        @include mq(desktop){
+            display: flex;
+            align-items: start;
+            justify-content: start;
+        }
     }
 
     &__description {
@@ -50,6 +55,14 @@
             max-width: 334px;
             font-size: 14px;
             line-height: 1.76;
+        }
+
+        @include mq(desktop) {
+            max-width: 463px;
+            margin-bottom: 32px;
+            font-size: 16px;
+            line-height: 1.76;
+            letter-spacing: 0.04em;
         }
     }
 
@@ -74,27 +87,36 @@
             line-height: 1.76;
             letter-spacing: 0.04em;
         }
+
+        @include mq(desktop) {
+            max-width: 463px;
+            margin-bottom: 40px;
+            
+            font-size: 14px;
+            line-height: 1.94;
+            letter-spacing: 0.04em;
+        }
     }
 
     &__text-wrapper {
         @include mq(mobile-only) {
-            display: block;
             max-width: 280px;
             margin-left: auto;
             margin-right: auto;
-
-            
         }
 
         @include mq(tablet-only) {
             max-width: 334px;
         }
-        
+
+        @include mq(desktop) {
+            max-width: 463px;
+            margin-top: 90px;
+        }
     }
 }
 
 .bg-cow {
-
     @include mq(mobile-only) {
         max-width: 280px;
         height: 279px;
@@ -122,6 +144,20 @@
 
         @include mq(retina){
             background-image: url(../images/about/cow_672.png);
+        }
+    }
+
+    @include mq(desktop) {
+        width: 501px;
+        height: 501px;
+        margin-right: 99px;
+
+        background-image: url(../images/about/cow_501.png);
+        background-position: center;
+        background-size: contain;
+
+        @include mq(retina){
+            background-image: url(../images/about/cow_1002.png);
         }
     }
 }
