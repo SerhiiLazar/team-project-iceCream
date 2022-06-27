@@ -38,5 +38,27 @@
 
     <!--  ?Add JS script -->
     <script src="./js/mobile-menu.js"></script>
+
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="../magnific-popup/magnific-popup.css">
+
+    <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <!-- Magnific Popup core JS file -->
+    <script type="module" src="../magnific-popup/jquery.magnific-popup.js"></script>
+    <script>
+        $(document).ready(function() {
+	        $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+		        disableOn: 700,
+		        type: 'iframe',
+		        mainClass: 'mfp-fade',
+	        	removalDelay: 160,
+		        preloader: false,
+
+		        fixedContentPos: false
+	        });
+        });
+    </script>
   </body>
 </html>
