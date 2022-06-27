@@ -25,7 +25,7 @@
 .advantages-item {
 display: flex;
 flex-direction: column;
-position: relative;
+
 
 margin-right: 70px;
 margin-bottom: 32px;
@@ -36,7 +36,8 @@ margin-bottom: 32px;
 }
 
 &:hover .advantages-list__h3-like {
-    animation: slide-up 1s 1;
+    animation: slide-up .9s 1;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     animation-fill-mode: forwards;
    
     @keyframes slide-up {
@@ -71,6 +72,7 @@ margin-bottom: 32px;
 
 .advantages-item__meta {
 text-align: start;
+position: relative;
 
 &::before {
     display: block;
@@ -126,10 +128,9 @@ background-size: cover;}
     line-height: 1.14;
 
     position: absolute;
-    top: 50%;
+    top: 40%;
    
-    transition: 250ms left cubic-bezier(0.4, 0, 0.2, 1),
-    250ms opacity cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 250ms opacity cubic-bezier(0.4, 0, 0.2, 1);
     
 
     @include mq(tablet) {
