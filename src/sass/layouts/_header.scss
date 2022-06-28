@@ -1,3 +1,24 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: 767.98px) {
+        width: 100%;
+    }
+
+    @media screen and (min-width: 768px){
+        width: calc((100% - 200px));
+        
+    }
+
+}
+
+
 .header {
     position: absolute;
     top:0;
@@ -7,21 +28,61 @@
     width: 100%;
     z-index: 50;
 
+    &__nav {
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+        
+
+        @media screen and (max-width: 1279.98px) {
+            display: none;
+          }
+        @media screen and (min-width:1280px) {
+            padding-right: 141px;
+            padding-left: 128px;
+            
+        }  
+        
+          &-link {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 1);
+           &:hover,&focus {color: rgba(212, 20, 67, 1);
+            cursor: pointer;
+           
+          }
+        }
+    }
+
     
 
     &__container {
 
         display: flex;
-        height: 66px;
         background-color: transparent;
 
         padding-top: 12px;
         padding-left: 20px;
         padding-right: 20px;
-
         justify-content: space-between;
 
+       
+
         width: 100%;
+
+        @media screen and (min-width:768px) {
+            padding-top: 32px;
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+
+        @media screen and (min-width:1280px) {
+            padding-top: 40px;
+            padding-left: 56px;
+            padding-right: 56px;
+            justify-content: space-between;
+        }
+
+
         
 
     }
@@ -37,7 +98,16 @@
   
 
   &:hover,&:focus {transform:scale(1.1);}
+
+  @media screen and (min-width: 1279.98px) {
+    display: none;
+  }
     
 
 }
 
+.mobile-hidden {
+    @media screen and (max-width: 767.98px) {
+        display: none;
+    }
+}

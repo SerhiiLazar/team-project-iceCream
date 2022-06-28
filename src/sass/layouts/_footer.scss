@@ -5,17 +5,77 @@
 
   &__container {
     padding-bottom: 10px;
+
+    @include mq(desktop) {
+      padding-bottom: 5px;
+    }
+  }
+
+  &__wrap {
+    @include mq(tablet-only) {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 48px;
+    }
+
+    @include mq(desktop) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 67px;
+    }
   }
 
   &__title-box {
-    margin-bottom: 40px;
+    max-width: 234px;
 
-    max-width: 232px;
+    @include mq(mobile-only) {
+      margin-bottom: 40px;
+    }
+
+    @include mq(tablet-only) {
+      max-width: 340px;
+    }
+
+    @include mq(desktop) {
+      max-width: 474px;
+    }
+  }
+
+  &__subtitle {
+    @include mq(tablet) {
+      font-size: 26px;
+      line-height: 1.15;
+    }
+
+    @include mq(desktop) {
+      font-size: 30px;
+      line-height: 1.13;
+    }
   }
 
   &__title {
     display: block;
     margin-top: 16px;
+
+    @include mq(tablet) {
+      font-size: 48px;
+      line-height: 1.15;
+    }
+
+    @include mq(desktop) {
+      font-size: 58px;
+    }
+  }
+
+  &__block {
+    @include mq(tablet-only) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      padding-bottom: 10px;
+    }
   }
 
   &__social-box {
@@ -35,6 +95,13 @@
 
     &:last-child {
       margin-right: 0;
+    }
+
+    @include mq(tablet) {
+      margin-right: 30px;
+
+      width: 34px;
+      height: 34px;
     }
   }
 
@@ -60,13 +127,27 @@
 
   &__contact-text {
     display: flex;
+    align-items: center;
     justify-content: flex-end;
-    margin-bottom: 56px;
 
     font-weight: 700;
     font-size: 12px;
     line-height: 1.83;
     color: #000000;
+
+    @include mq(mobile-only) {
+      margin-bottom: 56px;
+    }
+
+    @include mq(tablet) {
+      font-size: 14px;
+      line-height: 1.86;
+    }
+
+    @include mq(tablet) {
+      font-size: 16px;
+      line-height: 1.88;
+    }
   }
 
   &__contect-tel {
@@ -76,6 +157,11 @@
     font-size: 12px;
     line-height: 1.83;
     color: #d41443;
+
+    @include mq(tablet) {
+      font-size: 14px;
+      line-height: 1.86;
+    }
   }
 
   &__сopyright-box {
@@ -91,15 +177,26 @@
 
       height: 1px;
       background-color: #e1e1e1;
+
+      @include mq(tablet) {
+        bottom: 40px;
+      }
+
+      /* @include mq(desktop) {
+        bottom: 67px;
+      } */
     }
   }
 
   &__сopyright-text {
-    font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.5;
 
     color: #907e82;
+
+    @include mq(tablet) {
+      display: inline-block;
+    }
   }
 }

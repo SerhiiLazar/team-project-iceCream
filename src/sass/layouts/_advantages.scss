@@ -6,11 +6,11 @@
     padding-bottom: 60px;
 
     @include mq(tablet) {
-        margin-bottom: 64px;
+        padding-bottom: 64px;
     }
 
     @include mq(desktop) {
-        margin-bottom: 120px;
+        padding-bottom: 120px;
     }
 }
 
@@ -30,11 +30,10 @@
     @include mq(tablet) {
     display: flex;
     flex-wrap: wrap;
-    margin-right: 160px;
     }
 
-    @include mq(desktop) {
-        margin-right: 80px;
+    @include mq(tablet-only) {
+        margin-right: 140px;
     }
 
 }

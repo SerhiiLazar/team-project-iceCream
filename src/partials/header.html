@@ -1,27 +1,53 @@
 <header class="header" id="header">
   <div class="header__container">
-    <nav>
-        <a class="header__logo-link" aria-label="logotype" href="./index.html">
-          <img
-            class="logo__img"
-            src="./images/header/logo-group.svg"
-            alt="logotype"
-            width="199"
-            height="50"
-          />
-        </a>
+    <nav class="nav">
+      <a class="header__logo-link" aria-label="logotype" href="./index.html">
+        <img
+          class="logo__img"
+          src="./images/header/logo-group.svg"
+          alt="logotype"
+          width="199"
+          height="50"
+        />
+      </a>
+
+      <ul class="header__nav">
+        <li class="header__nav-link"><a class="" href="#header">Home</a></li>
+        <li class="header__nav-link"><a class="" href="#about">About us</a></li>
+        <li class="header__nav-link">
+          <a class="" href="#how"></a>How it’s made?
+        </li>
+        <li class="header__nav-link">
+          <a class="" href="#products">Our products</a>
+        </li>
+        <li class="header__nav-link">
+          <a class="" href="#contact">Contact</a>
+        </li>
+      </ul>
+
+      <button
+        class="burger__button js-open-menu"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg class="burger__button" width="20px" height="14px">
+          <use
+            href="./images/header/header-sprite.svg#icon-header_burger"
+          ></use>
+        </svg>
+      </button>
     </nav>
 
     <button
-      class="burger__button js-open-menu"
-      type="button"
-      aria-expanded="false"
-      aria-controls="mobile-menu"
+      class="mobile-menu__buy-btn mobile-hidden mobile-menu__buy-btn_hero"
     >
-      <svg class="burger__button" width="20px" height="14px">
-        <use href="./images/header/header-sprite.svg#icon-header_burger"></use>
+      Buy now
+      <svg class="menu-button__arrow" width="10px" height="16px">
+        <use
+          href="./images/header/header-sprite.svg#icon-menu_arrow_button"
+        ></use>
       </svg>
     </button>
   </div>
 </header>
-
