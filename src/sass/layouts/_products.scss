@@ -1,21 +1,43 @@
+.container {
+    @include mq(tablet) {
+         padding-right: 32px;   
+         padding-left: 32px;
+    }
+
+    @include mq(desktop) {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}
+
 .section-products {
     padding-top: 60px;
     padding-bottom: 60px;
 
     &__label {            
-            margin-bottom: 15px;
-    
-            font-family: 'Titan One';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 1.14;
-            text-align: center;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-    
-            color: #FFA5BA;
+        margin-bottom: 15px;
+
+        font-family: 'Titan One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.14;
+        text-align: center;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+
+        color: #FFA5BA;
+        
+        @include mq(tablet) {
+            margin-bottom: 18px;
+            font-size: 26px;
         }
+
+        @include mq(desktop) {
+            margin-bottom: 16px;
+            font-size: 30px;
+        }            
+    }
 
     &__title {
         margin-bottom: 8px;  
@@ -30,10 +52,28 @@
         text-transform: uppercase;
 
         color: #D41443;
+
+        @include mq(tablet) {                
+            margin-bottom: 20px;
+            font-size: 48px;
+        }
+
+        @include mq(tablet) {
+            margin-bottom: 20px;
+            font-size: 58px;
+        }
     }
 
 }
+
 .products {
+    @include mq(tablet) {
+        display: flex;
+        justify-content: center;
+        margin-right: auto; 
+        margin-left: auto;       
+    }
+
     &__item {
         display: flex;
         flex-direction: column;
@@ -46,28 +86,76 @@
         margin-right: auto;
 
         height: 629px;
-        padding-top: 308px;
+        padding-top: 300px;
         padding-left: 40px;
         padding-right: 40px;
         padding-bottom: 40px;
-        border-radius: 24px;
+        border-radius: 24px;        
 
         max-width: 280px;        
-    }    
+        
+        @include mq(tablet) {
+            margin-left: 0px;
+            margin-right: 0px;
+
+            width: calc((100% - 32px) / 3);
+            max-width: 224px;
+            height: 611px;
+            padding-top: 256px;
+            padding-left: 32px;
+            padding-right: 32px;
+            padding-bottom: 40px;
+
+            max-width: 224px;
+        }
+
+        @include mq(desktop) {
+            margin-left: 0px;
+            margin-right: 0px;
+
+            width: calc((100% - 64px) / 3);
+            max-width: 368px;
+            height: 796px;
+            padding-top: 426px;
+            padding-left: 63px;
+            padding-right: 63px;
+            padding-bottom: 60px;
+
+            max-width: 368px;
+        }
+
+        box-shadow: 0px 11px 10px -9px rgba(161, 159, 159, 1);
+        -webkit-box-shadow: 0px 11px 10px -9px rgba(161, 159, 159, 1);
+        -moz-box-shadow: 0px 11px 10px -9px rgba(161, 159, 159, 1);
+    }  
+    
+    &__item:not(:last-child) {
+        @include mq(tablet) {
+            margin-right: 16px;
+        }
+
+        @include mq(desktop) {
+            margin-right: 32px;
+        }
+    }
     
     &__title {
-       display: block;       
+        position: relative;
+        display: block;            
+        font-family: 'Titan One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.1;
+        text-align: center;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;     
+        color: #FFFFFF;
 
-       font-family: 'Titan One';
-       font-style: normal;
-       font-weight: 400;
-       font-size: 20px;
-       line-height: 1.1;
-       text-align: center;
-       letter-spacing: 0.04em;
-       text-transform: uppercase;
-
-       color: #FFFFFF;
+        @include mq(desktop) {
+            font-size: 30px;
+            line-height: 1.15;
+        }
     }    
 
     &__text {        
@@ -81,6 +169,15 @@
         letter-spacing: 0.04em;
 
         color: #FFFFFF;
+
+        @include mq(tablet) {
+            line-height: 1.76;
+        }
+
+        @include mq(desktop) {
+            font-size: 16px;
+            line-height: 1.76;
+        }
     }
 
     &__item::after {
@@ -95,6 +192,18 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+
+        @include mq(tablet) {                                 
+            width: 100%;
+            max-width: 224px;
+            height: 224px;              
+        }
+
+        @include mq(desktop) {
+            width: 100%;
+            max-width: 368px;
+            height: 394px;
+        }        
     }
 
     &__item--cream::after {
@@ -104,6 +213,26 @@
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
             background-image: url(../images/products/Products-1_sm@2x.png);
+        }
+
+        @include mq(tablet) {
+            background-image: url(../images/products/Products-1_md.png);
+        
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/products/Products-1_md@2x.png);
+            }
+        }
+
+        @include mq(desktop) {
+            background-image: url(../images/products/Products-1_lg.png);
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/products/Products-1_lg@2x.png);
+            }
         }
     }
 
@@ -115,6 +244,25 @@
         (min-resolution: 2dppx) {
             background-image: url(../images/products/Products-2_sm@2x.png);
         }
+
+        @include mq(tablet) {
+            background-image: url(../images/products/Products-2_md.png);
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/products/Products-2_md@2x.png);
+            }
+        }
+
+        @include mq(desktop) {
+            background-image: url(../images/products/Products-2_lg.png);
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/products/Products-2_lg@2x.png);
+            }
+        }
     }
 
     &__item--milk::after {
@@ -125,13 +273,41 @@
         (min-resolution: 2dppx) {
             background-image: url(../images/products/Products-3_sm@2x.png);
         }
+
+        @include mq(tablet) {
+            background-image: url(../images/products/Products-3_md.png);
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/products/Products-3_md@2x.png);
+            }
+        }
+
+        @include mq(desktop) {
+            background-image: url(../images/products/Products-3_lg.png);
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/products/Products-3_lg@2x.png);
+            }
+        }
     }
 
     &__title::after {
-        display: block;
         content: '';
+        position: absolute;
+        left: 50%; 
+        top: 52px; 
+        transform: translateX(-50%); 
+        
+        @include mq(desktop) {
+            top: 62px;
+        }
 
-        margin-top: 32px;
+        display: block;
+
+        width: 26px;                
         height: 6px;
         background-image: url(../images/products/svg/elips.svg);
         background-position: center;
@@ -148,13 +324,47 @@
 
         z-index: -100;
 
-        border-radius: 24px;
+        border-radius: 24px;        
         
         width: 100%;
         height: 489px;
-        background-image: url(../images/products/svg/Rectangle-1.svg);
+        background-image: url(../images/products/Rectangle-1_sm.jpg);
         background-position: center;
         background-repeat: no-repeat;
+
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/products/Rectangle-1_sm@2x.jpg);
+            }
+
+        @include mq(tablet) {
+            width: 100%;
+            max-width: 224px;
+            height: 473px;
+
+            background-image: url(../images/products/Rectangle-1_md.jpg);
+                    
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/products/Rectangle-1_md@2x.jpg);
+            }       
+        }
+
+        @include mq(desktop) {
+            width: 100%;
+            max-width: 368px;
+            height: 535px;
+
+            background-image: url(../images/products/Rectangle-1_lg.jpg);
+            
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/products/Rectangle-1_lg@2x.jpg);
+            }
+        }                
     }
 
     &__item--coffee::before {
@@ -171,9 +381,43 @@
 
         width: 100%;
         height: 489px;
-        background-image: url(../images/products/svg/Rectangle-2.svg);
-        background-position: center;
-        background-repeat: no-repeat;
+        background-image: url(../images/products/Rectangle-2_sm.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+        
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/products/Rectangle-2_sm@2x.jpg);
+        }
+    
+        @include mq(tablet) {
+            width: 100%;
+            max-width: 224px;
+            height: 473px;
+    
+            background-image: url(../images/products/Rectangle-2_md.jpg);
+    
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/products/Rectangle-2_md@2x.jpg);
+            }
+        }
+    
+        @include mq(desktop) {
+            width: 100%;
+            max-width: 368px;
+            height: 535px;
+    
+            background-image: url(../images/products/Rectangle-2_lg.jpg);
+    
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/products/Rectangle-2_lg@2x.jpg);
+            }
+        }
     }
 
     &__item--milk::before {
@@ -190,9 +434,43 @@
 
         width: 100%;
         height: 489px;
-        background-image: url(../images/products/svg/Rectangle-3.svg);
+        background-image: url(../images/products/Rectangle-3_sm.jpg);
         background-position: center;
         background-repeat: no-repeat;
+    
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/products/Rectangle-3_sm@2x.jpg);
+        }
+    
+        @include mq(tablet) {
+            width: 100%;
+            max-width: 224px;
+            height: 473px;
+    
+            background-image: url(../images/products/Rectangle-3_md.jpg);
+    
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/products/Rectangle-3_md@2x.jpg);
+            }
+        }
+    
+        @include mq(desktop) {
+            width: 100%;
+            max-width: 368px;
+            height: 535px;
+    
+            background-image: url(../images/products/Rectangle-3_lg.jpg);
+    
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/products/Rectangle-3_lg@2x.jpg);
+            }
+        }
     }    
 
     &__button {
@@ -209,16 +487,23 @@
         width: 40px;
         border-radius: 50%;
 
+        background-color: #FFFFFF;
+
+        box-shadow:
+                0px 1px 1px rgba(0, 0, 0, 0.12),
+                0px 4px 4px rgba(0, 0, 0, 0.06),
+                1px 4px 6px rgba(0, 0, 0, 0.16);        
+
         cursor: pointer;
         transform: scale(1);
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     &__button:hover,
-    &__button:focus, {
-        transform: scale(1.5);
+    &__button:focus {
+        transform: scale(1.5);        
     }
-
+           
     &__icon {
         fill: #D41443;
     }
@@ -234,13 +519,29 @@
         bottom: 0px;    
         
     width: 100%;
-    height: 320px;     
+    height: 329px;     
     
     padding-top: 0px;
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 40px;
     border-radius: 24px;  
+
+    @include mq(tablet) { 
+        height: 355px;
+        
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 40px;   
+    }
+
+    @include mq(desktop) {
+        height: 370px;
+
+        padding-left: 63px;
+        padding-right: 63px;
+        padding-bottom: 60px;
+    }
     
     &__item {
         display: flex;
@@ -256,6 +557,15 @@
         letter-spacing: 0.04em;
 
         color: #FFFFFF;
+
+        @include mq(tablet) {
+            line-height: 1.76;
+        }
+
+        @include mq(desktop) {
+            font-size: 16px;
+            line-height: 1.76;
+        }
     }
 
     &__item:not(:last-child) {
@@ -290,6 +600,11 @@
         text-transform: uppercase;
 
         color: #FFFFFF;
+
+        @include mq(desktop) {
+            font-size: 30px;
+            line-height: 1.15;
+        }
     }
 }
 
@@ -298,6 +613,14 @@
     bottom: 0;
     left: 0;
     transform: rotate(52deg) translate(-85px, 50px);
+
+    @include mq(tablet) {
+        transform: rotate(50deg) translate(-63px, 38px);
+    }
+
+    @include mq(desktop) {
+        transform: rotate(39deg) translate(-100px, 45px);
+    }
 
     content: 'from cow to wow';  
     display: flex;
@@ -314,12 +637,21 @@
     line-height: 1.11;
     text-align: center;
     letter-spacing: 0.04em;
-    text-transform: uppercase;
+    text-transform: uppercase;    
 
     color: #FFFFFF;
 
     background-color: rgba(0, 0, 0, 0.158);
     border: 1px solid #FFFFFF;
+
+    @include mq(tablet) {
+        font-size: 11px;
+    }
+
+    @include mq(desktop) {
+        height: 70px;
+        font-size: 17px;
+    }
 }
 
 .price--cream {
@@ -341,13 +673,11 @@
     background-color: #F0D1A5;
 
     transform: translateX(0%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &.is-hidden2 {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-
+        opacity: 0;       
         transform: translateX(-100%);
     }
 }
@@ -356,13 +686,11 @@
     background-color: #C2E297;
 
     transform: translateX(0%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &.is-hidden3 {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-
+        opacity: 0;        
         transform: translateX(-100%);
     }
 }
