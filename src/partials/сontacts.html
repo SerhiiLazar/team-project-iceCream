@@ -1,8 +1,8 @@
 <!-- contacts -->
 
-<section class="section contacts">
+<section class="section contacts" id="contact">
     <div class="container">
-        <h2 class="contacts__title" hidden>Контакты</h2>
+        <h2 class="contacts__title">Контакты</h2>
         <ul class="contacts__list list">
             <li class="contacts__item">
                 <div class="adress-card">
@@ -54,7 +54,7 @@
                     <div class="location">
                         <h3 class="adress-card__title">Los Angeles</h3>
                         <p class="adress-card__subtitle">
-                            Fusce ut velit laoreet, tempus <br> arcu molestie vulputate
+                            Fusce ut velit laoreet, tempus arcu molestie vulputate
                         </p>
                     </div>
                     
@@ -96,7 +96,7 @@
                     <div class="location">
                         <h3 class="adress-card__title">New York</h3>
                         <p class="adress-card__subtitle">
-                            Fusce ut velit laoreet, tempus <br> arcu molestie vulputate
+                            Fusce ut velit laoreet, tempus arcu molestie vulputate
                         </p>
                     </div>
                     
@@ -131,21 +131,35 @@
                 </div>
             </li>
         </ul>
-        <div class="cont-btn">
-            <button class="cont-btn__locations" type="button">
-                Our Location
-                <svg class="cont-btn__icon" width="9px" height="13px">
-                    <use href="../src/images/about/section-about-sprite.svg#icon-vector-right"></use>
-                </svg>
-            </button>
-            
-            <button class="cont-btn__franchise" type="button">
+        <ul class="cont-btn">
+            <li>
+                <a class="popup-gmaps" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190180.92347749064!2d-87.82442590504043!3d41.85893224233181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2bcdde2e3dbf%3A0x788a2cf03bc86a57!2sIce%20cream!5e0!3m2!1sru!2sua!4v1656337023782!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    Our Location
+                    <svg class="cont-btn__icon" width="9px" height="13px">
+                        <use href="../src/images/contacts/contact-sprite.svg#vector_1"></use>
+                    </svg>
+                </a>  
+                <!-- <button class="popup-gmaps" type="button" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190180.92347749064!2d-87.82442590504043!3d41.85893224233181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2bcdde2e3dbf%3A0x788a2cf03bc86a57!2sIce%20cream!5e0!3m2!1sru!2sua!4v1656337023782!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    Our Location
+                    <svg class="cont-btn__icon" width="9px" height="13px">
+                        <use href="../src/images/about/section-about-sprite.svg#icon-vector-right"></use>
+                    </svg>
+                </button> -->
+            </li>
+            <li>
+                <a class="cont-btn__franchise">
+                    Franchise
+                    <svg class="cont-btn__icon" width="9px" height="13px">
+                        <use href="../src/images/contacts/contact-sprite.svg#vector_1"></use>
+                    </svg>
+                </a>
+                <!-- <button class="cont-btn__franchise" type="button">
                     Franchise
                 <svg class="cont-btn__icon" width="9px" height="13px">
                     <use href="../src/images/about/section-about-sprite.svg#icon-vector-right"></use>
                 </svg>
-            </button>
-        </div>
-        
+            </button> -->
+            </li>
+        </ul>
     </div>
 </section>
