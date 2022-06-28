@@ -2,25 +2,46 @@
   <article class="swiper">
     <div class="customer__madia">
       <div class="img customer__img">
-        <img src="./images/customer/custgirl/testimonials1.png" alt="фото" />
+        <picture>
+           <source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/customer/testimonials1_lg.jpg 1x,
+              ./images/customer/testimonials@2x_lg.jpg 2x
+            "
+            type="image/jpg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/customer/testimonials1_md.jpg 1x,
+              ./images/customer/testimonials@2x_md.jpg 2x
+            "
+            type="image/jpg"
+          />
+           <source
+            media="(max-width: 767px)"
+            srcset="
+              ./images/customer/testimonials1_sm.jpg   1x,
+              ./images/customer/testimonials@2x_sm.jpg 2x
+            "
+            type="image/jpg"
+          />
+          <img
+            src="./images/customer/testimonials1_sm.jpg"
+            alt="фото"
+            loading="lazy"
+          />
+        </picture>
       </div>
       <div class="customer__text">
-        <svg class="icon__untitled" width="54" height="40">
-          <use
-            href="./images/customer/cust_spritesvg/symbol-defs.svg#icon-untitled"
-          ></use>
-        </svg>
-        <div class="customer__text--link">
           <p class="customer__text--style">
-            Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
-            Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
-            ipsum primis in nibh vel risus.
+           Приятный магазин, большой ассртимент вкуснейшего мороженного, менеджеры настоящие проффесионалы !!! О≠≠тдельное спасибо консультанту за помощь, а также за небольшой подарок :)
           </p>
         </div>
       </div>
       <div class="customer__icon">
-        <span class="customer__icon-name">Emily, Los Angeles</span>
-
+        <p class="customer__icon-name">Emily, Los Angeles</p>
         <div class="customer__icon__svg">
           <ul class="customer__icon--page">
             <li class="customer__link">
