@@ -320,31 +320,39 @@
 
         padding-top: 98px;
 
+
     }
-    &__block {
-        text-align: end;
-        position: relative;
+}
+.sote__block {
+    text-align: end;
+    position: relative;
 
-        z-index: 1;
+    z-index: 1;
 
-        &:nth-child(1) {
-            margin-bottom: 16px;
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            right: -10;
-            top: -2;
-            width: 16px;
-            height: 16px;
-
-            z-index: -1;
-
-            border-radius: 50%;
-            background-color:rgba(255, 255, 255, 1);
-        }
+    &:nth-child(1) {
+        margin-bottom: 16px;
     }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: -10;
+        top: -2;
+        width: 16px;
+        height: 16px;
+
+        z-index: -1;
+
+        border-radius: 50%;
+        background-color:rgba(255, 255, 255, 1);
+    @include mq(desktop) {
+        width: 30px;
+        height: 30px;
+    }
+    }
+    
+
+
     &__block--trucks {
         width: 51px;
         height: 43px;
@@ -361,6 +369,10 @@
 
         color: rgba(212, 20, 67, 1);
 
+        @include mq(desktop) {
+            font-size: 46px;
+            line-height: 1.15;
+        }
     }
 
     &__block>p {
@@ -372,6 +384,10 @@
 
         color: rgba(255, 255, 255, 1);
 
+        @include mq(desktop) {
+            font-size: 14px;'
+            line-height: 1.28;
+        }
 
     }
 
