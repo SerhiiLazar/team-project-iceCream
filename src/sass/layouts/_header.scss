@@ -22,6 +22,27 @@
     width: 100%;
     z-index: 50;
 
+    &__nav {
+        display: flex;
+        
+        width: 800px;
+
+        justify-content: space-around;
+
+        @media screen and (max-width: 1279.98px) {
+            display: none;
+          }
+        
+          &-link {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 1);
+           &:hover,&focus {color: rgba(212, 20, 67, 1);
+            cursor: pointer;
+           
+          }
+        }
+    }
+
     
 
     &__container {
@@ -66,7 +87,7 @@
 
   &:hover,&:focus {transform:scale(1.1);}
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1279.98px) {
     display: none;
     
   }
