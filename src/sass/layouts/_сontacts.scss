@@ -24,11 +24,42 @@
         #ffffff 28%,
         rgba(255, 245, 246, 1) 28%
     );
-    
-        
+
+    }
+
+    @include mq(tablet) {
+        padding-top: 80px;
+        padding-bottom: 40px;
     
     }
     
+    @include mq(desktop) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+
+    }
+    
+}
+
+// .contacts .container {
+//     margin-left: 20px;
+//     margin-right: 20px;
+
+//     @include mq(tablet) {
+//         margin-left: 16px;
+//         margin-right: 16px;
+    
+//     }
+    
+//     @include mq(desktop) {
+
+
+//     }
+    
+// }
+
+.contacts__title {
+    visibility: hidden;
 }
     
 .contacts__list {
@@ -50,15 +81,13 @@
     }
     
     @include mq(desktop) {
-    
-            // display: flex;
-            // flex-wrap: nowrap;
+
     
     }
 }
     
 .contacts__item {
-    margin: 10px;
+    margin: 10px 20px;
     padding: 40px 32px;
         // outline: 1px solid red;
     width: 100%;
@@ -69,17 +98,8 @@
     border-radius: 24px;
     
     @include mq(tablet) {
-        max-width: 224px;
-        margin: 16px;
-    
-            // &:nth-child(odd) {
-            //     margin-right: 30px;
-            // }
-    
-            // &:nth-child(-n+2) {
-            //     margin-bottom: 30px;
-            // }
         flex-basis: calc((100% - 3*10px)/3);
+        margin: 16px;
     
     }
 
@@ -105,6 +125,16 @@
     justify-content: center;
     background: #F0D1A5;
     border-radius: 4px;
+
+    @include mq(tablet) {
+        margin-bottom: 32px;
+    
+    }
+    
+    @include mq(desktop) {
+    
+
+    }
 }
     
 .contacts__item:hover .uptitle-cafe {
@@ -116,32 +146,27 @@
 @keyframes animate30 {
     0% {
       transform: rotate(0deg);
-    //   background-color: #188CE8;
-    //   color: #ffffff;
+
     }
   
     25% {
       transform: rotate(-15deg);
-    //   background-color: var(--accent-cl);
-    //   color: #ffffff;
+
     }
 
     50% {
         transform: rotate(15deg);
-      //   background-color: var(--accent-cl);
-      //   color: #ffffff;
+
     }
     
     75% {
         transform: rotate(-15deg);
-      //   background-color: var(--accent-cl);
-      //   color: #ffffff;
+
     }
   
     100% {
       transform: rotate(0deg);
-    //   background-color: #188CE8;
-    //   color: #ffffff;
+
     }
 }
     
@@ -156,6 +181,17 @@
     justify-content: center;
     background: #C2E297;
     border-radius: 4px;
+
+    @include mq(tablet) {
+        margin-bottom: 32px;
+    
+    }
+    
+    @include mq(desktop) {
+    
+
+    
+    }
 }
 
 .contacts__item:hover .uptitle-foodtrack {
@@ -167,32 +203,27 @@
 @keyframes animate30 {
     0% {
       transform: rotate(0deg);
-    //   background-color: #188CE8;
-    //   color: #ffffff;
+
     }
   
     25% {
       transform: rotate(-10deg);
-    //   background-color: var(--accent-cl);
-    //   color: #ffffff;
+
     }
 
     50% {
         transform: rotate(10deg);
-      //   background-color: var(--accent-cl);
-      //   color: #ffffff;
+
     }
     
     75% {
         transform: rotate(-10deg);
-      //   background-color: var(--accent-cl);
-      //   color: #ffffff;
+
     }
   
     100% {
       transform: rotate(0deg);
-    //   background-color: #188CE8;
-    //   color: #ffffff;
+
     }
 }
     
@@ -206,12 +237,21 @@
     font-size: 12px;
     line-height: 1.86;
     
-    
-        
     letter-spacing: 0.04em;
+
+    @include mq(tablet) {
+        font-size: 16px;
+    
+    }
+    
+    @include mq(desktop) {
+        
+
+    }
 }
     
 .adress-card__title {
+
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 500;
@@ -222,6 +262,16 @@
     
     
     letter-spacing: 0.04em;
+
+    @include mq(tablet) {
+        font-size: 14px;
+    
+    }
+    
+    @include mq(desktop) {
+        font-size: 16px;
+        
+    }
 }
 
 .contacts__item:hover .adress-card__title {
@@ -237,8 +287,17 @@
     font-size: 12px;
     line-height: 1.5;
     
-    
     color: #907E82;
+
+    @include mq(tablet) {
+        font-size: 14px;
+    
+    }
+    
+    @include mq(desktop) {
+        font-size: 16px;
+        
+    }
 }
     
 .adress-card__link {
@@ -247,16 +306,38 @@
 }
 
 .location {
-    padding-bottom: 32px;
+    margin-bottom: 24px;
     // outline: 1px solid orangered;
-    border-bottom: 1px solid #E1E1E1;
+    @include mq(tablet) {
+        margin-bottom: 32px;
+    
+    }
+    
+    @include mq(desktop) {
+    
+
+    
+    }
+    
 }
 
 .adress-card__schedule {
-    padding-top: 32px;
-    padding-bottom: 32px;
-
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-top: 1px solid #E1E1E1;
     border-bottom: 1px solid #E1E1E1;
+
+    @include mq(tablet) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    
+    }
+    
+    @include mq(desktop) {
+    
+
+    
+    }
 }
     
 .schedule__period {
@@ -265,6 +346,16 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 1.86;
+
+    @include mq(tablet) {
+        font-size: 14px;
+    
+    }
+    
+    @include mq(desktop) {
+        font-size: 16px;
+        
+    }
 }
     
 .schedule__time {
@@ -275,6 +366,16 @@
     line-height: 1.86;
     
     color: #FFA5BA;
+
+    @include mq(tablet) {
+        font-size: 14px;
+    
+    }
+    
+    @include mq(desktop) {
+        font-size: 16px;
+        
+    }
 }
 
 .schedule__weekdays {
@@ -282,7 +383,17 @@
 }
     
 .adress-card__link {
-    padding-top: 32px;
+    padding-top: 24px;
+
+    @include mq(tablet) {
+        padding-top: 32px;
+    
+    }
+    
+    @include mq(desktop) {
+        
+        
+    }
 }
 
 .adress-card__link--phone {
@@ -298,6 +409,16 @@
     &:hover,
     &:focus {
         color: #D41443;
+    }
+
+    @include mq(tablet) {
+        font-size: 14px;
+    
+    }
+    
+    @include mq(desktop) {
+        font-size: 16px;
+        
     }
 }
     
@@ -315,6 +436,16 @@
     &:focus {
         color: #D41443;
     }
+
+    @include mq(tablet) {
+        font-size: 14px;
+    
+    }
+    
+    @include mq(desktop) {
+        font-size: 16px;
+        
+    }
 }
 
 .cont-btn {
@@ -328,6 +459,8 @@
     @include mq(tablet) {
        flex-direction: row;
        justify-content: center;
+
+       margin-top: 60px;
     }
 
     @include mq(desktop) {
@@ -337,6 +470,7 @@
 
 .cont-btn__locations {
     padding: 6px 18px;
+    
     margin-bottom: 10px;
     
     width: 162px;
@@ -355,11 +489,14 @@
     align-items: center;
     text-align: center;
 
+    box-shadow: 0 1px 1px #0000001f, 0 4px 4px #0000000f, 1px 4px 6px #00000029;
+
     transform: scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
     @include mq(tablet) {
+        
         margin-right: 15px;
     
     }
@@ -375,18 +512,19 @@
         transform: scale(1.1);
     }
 
-    // &:hover .cont-btn__icon,
-    // &:focus .cont-btn__icon {
-    //     color: #ffffff;
+    &:hover .cont-btn__icon,
+    &:focus .cont-btn__icon {
+        fill: #ffffff;
         
-    // }
+    }
 
 }
 
 
 .cont-btn__franchise {
     padding: 6px 32px;
-
+    
+    
     width: 162px;
     height: 44px;
     color: #D41443;
@@ -403,10 +541,13 @@
     align-items: center;
     text-align: center;
 
+    box-shadow: 0 1px 1px #0000001f, 0 4px 4px #0000000f, 1px 4px 6px #00000029;
+
     transform: scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     @include mq(tablet) {
+        
     
     }
 
