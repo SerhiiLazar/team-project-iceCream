@@ -454,7 +454,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content: center;
+    align-content: center;    
 
     @include mq(tablet) {
        flex-direction: row;
@@ -475,9 +475,13 @@
     
     width: 162px;
     height: 44px;
-    color: #D41443;
-    background-color: #ffffff;
+    color: #ffffff;
+    background-color: #D41443;
     border-radius: 22px;
+
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+            0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
 
     font-family: 'DM Sans';
     font-style: normal;
@@ -505,17 +509,15 @@
         
     }
 
-    &:hover,
-    &:focus {
-        color: #ffffff;
-        background-color: #d41443;
-        transform: scale(1.1);
-    }
-
     &:hover .cont-btn__icon,
     &:focus .cont-btn__icon {
         fill: #ffffff;
-        
+    }    
+    &:hover,
+    &:focus {
+        color: #d41443;
+        background-color: #FFFFFF;
+        transform: scale(1.1);
     }
 
 }
@@ -527,9 +529,12 @@
     
     width: 162px;
     height: 44px;
-    color: #D41443;
-    background-color: #ffffff;
+    
     border-radius: 22px;
+
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+            0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
 
     font-family: 'DM Sans';
     font-style: normal;
@@ -544,7 +549,9 @@
     box-shadow: 0 1px 1px #0000001f, 0 4px 4px #0000000f, 1px 4px 6px #00000029;
 
     transform: scale(1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     @include mq(tablet) {
         
@@ -564,8 +571,7 @@
 
     &:hover .cont-btn__icon,
     &:focus .cont-btn__icon {
-        fill: #ffffff;
-        
+        fill: #ffffff;        
     }
 }
 
@@ -574,9 +580,5 @@
     min-width: 9px;
     min-height: 13px;
     margin-left: auto;
-
-    // &:hover,
-    // &:focus {
-    //     fill: #ffffff;
-    // }
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

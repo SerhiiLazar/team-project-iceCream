@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
 .nav {
     display: flex;
     align-items: center;
@@ -8,6 +13,7 @@
 
     @media screen and (min-width: 768px){
         width: calc((100% - 200px));
+        
     }
 
 }
@@ -24,14 +30,18 @@
 
     &__nav {
         display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
         
-        width: 800px;
-
-        justify-content: space-around;
 
         @media screen and (max-width: 1279.98px) {
             display: none;
           }
+        @media screen and (min-width:1280px) {
+            padding-right: 141px;
+            padding-left: 128px;
+            
+        }  
         
           &-link {
         font-size: 16px;
@@ -53,8 +63,9 @@
         padding-top: 12px;
         padding-left: 20px;
         padding-right: 20px;
-
         justify-content: space-between;
+
+       
 
         width: 100%;
 
@@ -68,6 +79,7 @@
             padding-top: 40px;
             padding-left: 56px;
             padding-right: 56px;
+            justify-content: space-between;
         }
 
 
@@ -89,7 +101,6 @@
 
   @media screen and (min-width: 1279.98px) {
     display: none;
-    
   }
     
 

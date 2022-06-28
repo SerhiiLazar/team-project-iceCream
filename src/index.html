@@ -41,9 +41,10 @@
 
     <!--  Custom styles -->
     <link rel="stylesheet" href="./sass/index.scss" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script type="module" src="./index.js"></script>
   </head>
-  <body>
+  
     <!-- ❗️❗️❗️ Add partials like so for every page -->
     <include src="./partials/header.html"></include>
 
@@ -51,6 +52,10 @@
 
     <main>
       <include src="./partials/hero.html"></include>
+
+      <include src="./partials/modal.html"></include>
+
+      <include src="./partials/modal-franchise.html"></include>
 
       <include src="./partials/products.html"></include>
 
@@ -73,5 +78,7 @@
     <script src="./js/cream.js"></script>
     <script src="./js/coffee.js"></script>
     <script src="./js/milk.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/modal-franchise.js"></script>
   </body>
 </html>
