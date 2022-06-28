@@ -1,5 +1,5 @@
 // section HERO 
-.header__hero {
+.hero {
     background-color: rgba(255, 184, 202, 1);
     overflow: hidden;
 }
@@ -8,6 +8,7 @@
     margin-right: auto;
     padding-top: 83px;
     padding-bottom: 75px;
+    position: relative;
 
     z-index: 15;
     @include mq(tablet-only) {
@@ -38,12 +39,15 @@
     max-width: 218px;
     position: absolute;
     z-index: 15;
+
+    
     padding-top: 111px;
     padding-bottom: 83px;
 
     @include mq(tablet-only) {
         max-width: 162px;
         position: static;
+        margin-right: 54px;
         padding-top: 65px;
         padding-bottom: 0;
         position: relative;
@@ -52,6 +56,7 @@
         position: static;
         max-width: 277px;
         padding-top: 93px;
+        margin-right: 0;
         
     }
 }
@@ -201,7 +206,9 @@
 
         color: rgba(255, 255, 255, 1);
     @include mq(desktop) {
+        font-weight: 400;
         font-size: 14px;
+        line-height: 1.4;
     }
     }
 
@@ -214,7 +221,13 @@
         height: 18px;
         background-color: rgba(255, 255, 255, 1);
         border-radius: 50%;
+        cursor: pointer;
+    @include mq(desktop) {
+        width: 26px;
+        height: 26px;
+    }
     } 
+
     &__svg {
         
         fill: rgba(212, 20, 67, 1);
@@ -226,7 +239,7 @@
 
 
 .hero__eclipse {
-    max-width: 346px;
+    width: 346px;
     height: 344px;
     border-radius: 50%;
     background-color:rgba(255, 165, 186, 1);
@@ -238,15 +251,16 @@
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     @include mq(tablet-only) {
-        max-width: 335px;
-        width: 100%;
+        width: 335px;
         height: 333px;
+        margin-right: auto;
         margin-left: 0;
     }
     @include mq(desktop) {
-        max-width: 534px;
-        width: 100%;
+        width: 534px;
         height: 534px;
+        margin-left: auto;
+        margin-right: 41px;
     }
 }
 
@@ -303,12 +317,13 @@
 
 .store {
     display: none;
+    
 
     @include mq(tablet-only) {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        position: relative;
+        
 
         padding-top: 49px;
     }
@@ -316,46 +331,44 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        position: relative;
+        
 
         padding-top: 98px;
 
 
     }
-}
-.sote__block {
-    text-align: end;
-    position: relative;
-
-    z-index: 1;
-
-    &:nth-child(1) {
-        margin-bottom: 16px;
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        right: -10;
-        top: -2;
-        width: 16px;
-        height: 16px;
-
-        z-index: -1;
-
-        border-radius: 50%;
-        background-color:rgba(255, 255, 255, 1);
-    @include mq(desktop) {
-        width: 30px;
-        height: 30px;
-    }
-    }
     
+    &__block {
+        text-align: end;
+        position: relative;
+        z-index: 1;
 
+        &:nth-child(1) {
+            margin-bottom: 16px;
+        
+         
+        }
 
-    &--trucks {
-        width: 51px;
-        height: 43px;
+        &::after {
+            content: '';
+            position: absolute;
+            right: -10;
+            top: -2;
+            width: 16px;
+            height: 16px;
+
+            z-index: -1;
+
+            border-radius: 50%;
+            background-color:rgba(255, 255, 255, 1);
+        @include mq(desktop) {
+            width: 30px;
+            height: 30px;
+            right: -18;
+            top: -4;
+        }
+        }
+
     }
     &__block>span {
         font-family: 'Titan One';
@@ -385,7 +398,7 @@
         color: rgba(255, 255, 255, 1);
 
         @include mq(desktop) {
-            font-size: 14px;'
+            font-size: 14px;
             line-height: 1.28;
         }
 
@@ -397,15 +410,20 @@
     // }
 }
 .store__testy {
-    position: absolute;
+    width: 190px;
+    height: 150px;
     right: 0;
     z-index: 16;
-    bottom: -40px;
-    max-width: 190px;
+    bottom: 1;
+    
+    position: absolute;
+    
     
     @include mq(desktop) {
-        max-width: 304px;
+        width: 304px;
+        height: 241px;
         bottom: 0;
+        right: 0;
     }
 }
 
