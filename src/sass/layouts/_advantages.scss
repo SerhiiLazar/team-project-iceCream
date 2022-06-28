@@ -2,7 +2,8 @@
     padding-top: none;
     background-color: rgba(255, 245, 246, 1);
     
-    margin-bottom: 60px;
+    
+    padding-bottom: 60px;
 
     @include mq(tablet) {
         margin-bottom: 64px;
@@ -13,21 +14,55 @@
     }
 }
 
+.advantages-container {
+   
+    max-width: 320px;
+
+    @include mq(tablet) {
+        max-width: 100%;
+    }
+
+}
+
 .advantages-list {
     display: block;
 
     @include mq(tablet) {
     display: flex;
     flex-wrap: wrap;
+    margin-right: 160px;
     }
+
+    @include mq(desktop) {
+        margin-right: 80px;
+    }
+
 }
 
 .advantages-item {
 display: flex;
 flex-direction: column;
 
-margin-right: 70px;
+
+margin-right: 50px;
 margin-bottom: 32px;
+
+&:hover .advantages-list__p-like {
+    opacity: 1;
+    transform: scale(1);
+}
+
+&:hover .advantages-list__h3-like {
+    animation: slide-up .9s 1;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-fill-mode: forwards;
+   
+    @keyframes slide-up {
+        0% {left: 0;}
+        50% {left: -3%;}
+        to {left: 0;}
+    }
+}
 
 &:last-child {
     margin-bottom: 0px;
@@ -51,21 +86,24 @@ margin-bottom: 32px;
         
 }
 
-.advantages-item__meta {
+.advantages-list__p-like {
 text-align: start;
+position: relative;
 
 &::before {
     display: block;
     
     height: 50px;
-    margin-bottom: 16px;
+    margin-bottom: 76px;
     
     @include mq(tablet) {
     margin-bottom: 36px; 
+    margin-bottom: 105px;
     }
 
     @include mq(desktop) {
         margin-bottom: 40px; 
+        margin-bottom: 120px;
     }
 
     content: "";}
@@ -107,21 +145,22 @@ background-size: cover;}
     font-size: 36px;
     line-height: 1.14;
 
-    margin-bottom: 20px;
+    position: absolute;
+    top: 40%;
+   
+    transition: 250ms opacity cubic-bezier(0.4, 0, 0.2, 1);
+    
 
     @include mq(tablet) {
         font-size: 48px;
         line-height: 1.13;
-
-        margin-bottom: 13px;
+        top: 35%;
     }
 
     @include mq(desktop) {
         font-size: 58px;
         line-height: 1.17;
-
-        margin-bottom: 16px;
-
+        top: 30%;
     }
 }
 
@@ -132,12 +171,16 @@ background-size: cover;}
     font-size: 12px;
     line-height: 1.67;
 
-    padding-right: 20px;
+/*
+    opacity: 0.5;
+    transform: scale(0.99);
+    transition: 250ms opacity cubic-bezier(0.4, 0, 0.2, 1),
+    250ms  transform cubic-bezier(0.4, 0, 0.2, 1);
+*/
 
     @include mq(tablet) {
         font-size: 14px;
         line-height: 1.71;
-        padding-right: 0px;
     }
 
     @include mq(desktop) {
