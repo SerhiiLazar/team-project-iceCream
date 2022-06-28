@@ -509,15 +509,24 @@
         
     }
 
-    &:hover .cont-btn__icon,
-    &:focus .cont-btn__icon {
+    & .cont-btn__icon {
         fill: #ffffff;
-    }    
+        min-width: 9px;
+        min-height: 13px;
+        margin-left: auto;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
     &:hover,
     &:focus {
         color: #d41443;
-        background-color: #FFFFFF;
+        background-color: #ffffff;
         transform: scale(1.1);
+    }
+
+    &:hover .cont-btn__icon,
+    &:focus .cont-btn__icon {
+        fill: #d41443;        
     }
 
 }
@@ -531,7 +540,8 @@
     height: 44px;
     
     border-radius: 22px;
-
+    color: #D41443;
+    background-color: #ffffff;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
             0px 4px 4px rgba(0, 0, 0, 0.06),
             1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -560,6 +570,14 @@
 
     @include mq(desktop) {
         
+    }
+
+    & .cont-btn__icon {
+        fill: #d41443;
+        min-width: 9px;
+        min-height: 13px;
+        margin-left: auto;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     &:hover,
