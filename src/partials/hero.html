@@ -16,6 +16,31 @@
                 <a href="#about.html" class="hero__link hero__link--white">How it’s made?</a>
               </li>
             </ul>
+            <div class="hero__milk">
+              <div class="hero__milk-img">
+                <picture>
+                  <source media="(min-width: 1200x)" sizes="(max-width: 213px) 213px, 100vw" srcset="
+                    ./images/header/desktop/milk-ds.png 1x,
+                    ./images/header/desktop/milk-ds@2x.png 2x
+                  " type="image/png" />
+                  <source media="(min-width: 768px)" sizes="(max-width: 152px) 152px, 100vw" srcset="
+                    ./images/header/tablet/milk-tb.png 1x,
+                    ./images/header/tablet/milk-tb@2x.png 2x
+                  " type="image/png" />
+                  
+                  <img class="hero__milk-images" src="./images/header/tablet/milk-tb.png" alt="ice" width="152"
+                    height="154" />
+                </picture>
+              </div>
+              <div class="hero__milk-container milk-container">
+                <p class="milk-container__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+                <button class="milk-container__link" type="button">
+                  <svg class="milk-container__svg" width="20px" height="14px">
+                    <use href="./images/header/header-sprite.svg#icon-arrow-right2"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
           <div class="hero__eclipse">
             <picture>

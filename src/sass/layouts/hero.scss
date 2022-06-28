@@ -42,6 +42,7 @@
         position: static;
         padding-top: 65px;
         padding-bottom: 0;
+        position: relative;
     }
 }
 
@@ -83,6 +84,7 @@
 
 .hero__list {
     display: flex;
+    margin-bottom: 20px;
 }
 
 .hero__item {
@@ -120,6 +122,60 @@
     @include mq(tablet-only) {
         padding: 7px 12px;
     }
+}
+
+.hero__milk {
+    display: none;
+    @include mq(tablet-only) {
+        display: flex;
+        position: absolute;
+    }
+}
+
+.hero__milk-img {
+    @include mq(tablet-only){
+        width: 152px;
+        height: 154px;
+    }
+    @include mq(desktop) {
+        width: 213px;
+        height: 216px;
+    }
+   
+}
+
+.milk-container {
+    padding-top: 41px;
+    width: 114px;
+
+    &__text {
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 1.5;
+        
+        margin-bottom: 7px;
+
+        color: rgba(255, 255, 255, 1);
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 18px;
+        height: 18px;
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 50%;
+    } 
+    &__svg {
+        
+        fill: rgba(212, 20, 67, 1);
+
+
+    } 
+    
 }
 
 .hero__eclipse {
@@ -203,8 +259,24 @@
         text-align: end;
         position: relative;
 
+        z-index: 1;
+
         &:nth-child(1) {
             margin-bottom: 16px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: -10;
+            top: -2;
+            width: 16px;
+            height: 16px;
+
+            z-index: -1;
+
+            border-radius: 50%;
+            background-color:rgba(255, 255, 255, 1);
         }
     }
     &__block--trucks {
