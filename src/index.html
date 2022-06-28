@@ -70,8 +70,31 @@
 
     <!--  ?Add JS script -->
     <script src="./js/mobile-menu.js"></script>
-    <script src="./js/cream.js"></script>
-    <script src="./js/coffee.js"></script>
-    <script src="./js/milk.js"></script>
+
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="../node_modules/magnific-popup/dist/magnific-popup.css">
+
+    <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Magnific Popup core JS file -->
+    <script type="module" src="../node_modules/magnific-popup/dist/jquery.magnific-popup.js"></script>
+
+    
+    <script>
+        $(document).ready(function() {
+	        $('.popup-gmaps').magnificPopup({
+		        disableOn: 700,
+		        type: 'iframe',
+		        mainClass: 'mfp-fade',
+	        	removalDelay: 160,
+		        preloader: false,
+
+		        fixedContentPos: false
+	        });
+        });
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&sensor=SET_TO_TRUE_OR_FALSE" type="text/javascript">
+    </script>
   </body>
 </html>
