@@ -2,6 +2,15 @@
   <div class="menu-toggle__wrapper">
     <button
       class="menu-toggle js-close-menu"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu">
+        <svg class="menu-toggle" width="20px" height="20px">
+          <use href="./images/header/header-sprite.svg#icon-menu_close"></use>
+        </svg>
+      </button>
+    </div>
+  <button class="mobile-menu__buy-btn" type="button" data-modal-open5>Buy now
       type="button"
       aria-expanded="false"
       aria-controls="mobile-menu"
@@ -18,8 +27,7 @@
         href="./images/header/header-sprite.svg#icon-menu_arrow_button"
       ></use>
     </svg>
-  </button>
-
+  </button>  
   <ul class="mobile-menu__nav">
     <li class="mobile-menu__item">
       <a class="mobile-menu__link" href="#header">Home</a>
