@@ -1,7 +1,6 @@
-<header class="header">
+<header class="header" id="header">
   <div class="header__container">
     <nav>
-      <div class="header__logo-wrapper">
         <a class="header__logo-link" aria-label="logotype" href="./index.html">
           <img
             class="logo__img"
@@ -11,7 +10,6 @@
             height="50"
           />
         </a>
-      </div>
     </nav>
 
     <button
@@ -21,79 +19,9 @@
       aria-controls="mobile-menu"
     >
       <svg class="burger__button" width="20px" height="14px">
-        <use href="./images/header/header-sprite.svg#header_burger_btn"></use>
+        <use href="./images/header/header-sprite.svg#icon-header_burger"></use>
       </svg>
     </button>
   </div>
 </header>
 
-<!-- secrion HERO -->
-<div class="header__hero hero">
-  <div class="hero__wrapper">
-    <div class="container">
-      <div class="hero__content">
-        <h1 class="hero__title">
-          ice cream made with
-          <span class="hero__title hero__title--big">passion</span>
-        </h1>
-
-        <ul class="hero__list">
-          <li class="hero__item">
-            <a href="#prodacts.html" class="hero__link">Products</a>
-          </li>
-          <li class="hero__item">
-            <a href="#about.html" class="hero__link hero__link--white"
-              >How it’s made?</a
-            >
-          </li>
-        </ul>
-      </div>
-      <picture>
-        <source
-          media="(max-width: 320px)"
-          sizes="(min-width: 284px ) 284px, 100vw"
-          srcset="
-            ./images/header/mobail/Ellipse-mb.png    1x,
-            ./images/header/mobail/Ellipse-mb@2x.png 2x
-          "
-          type="image/png"
-        />
-        <source
-          media="(min-width: 321px )"
-          sizes="(min-width: 335px) 335px, 100vw"
-          srcset="
-            ./images/header/tablet/Ellipse-tb.png    1x,
-            ./images/header/tablet/Ellipse-tb@2x.png 2x
-          "
-          type="image/png"
-        />
-
-        <img
-          class="hero__images hero__images--eclips"
-          src="./images/header/mobail/Ellipse-mb.png"
-          alt="elips"
-          width="284"
-          height="344"
-        />
-      </picture>
-      <picture>
-        <source
-          media="(min-width: 320px)"
-          sizes="(min-width: 171px) 171px, 100vw"
-          srcset="
-            ./images/header/mobail/ice-mb.png    1x,
-            ./images/header/mobail/ice-mb@2x.png 2x
-          "
-          type="image/png"
-        />
-        <img
-          class="hero__images hero__images--ice"
-          src="./images/header/mobail/ice-mb.png"
-          alt="ice"
-          width="171"
-          height="410"
-        />
-      </picture>
-    </div>
-  </div>
-</div>
