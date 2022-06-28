@@ -1,34 +1,34 @@
 .about {
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
 
-    @include mq(tablet-only){
+    background-color: rgba(255, 245, 246, 1);
+
+    @include mq(tablet){
         padding-bottom: 60px;
     }
 
-    @include mq(desktop) {
-        background-image: url(../images/about/about-bg-desk.png);
-        background-repeat: no-repeat;
-        background-position: 0 84%;
-        background-size: contain;
-        @include mq(retina){
-            background-image: url(../images/about/about-bg-desk@2x.png);
-        }
-
-    }
-    background-color: rgba(255, 245, 246, 1);
-
-    &__content {
+    &__wrapper {
         @include mq(mobile-only) {
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: 0 69%;
-            background-image: url(../images/about/about-bg.png);
-    
-            @include mq(retina){
-                background-image: url(../images/about/about-bg@2x.png);
+            background: url(../images/about/milk-bg-left.png) top 67% left 0 no-repeat, url(../images/about/milk-bg-right.png) top 72% right 0 no-repeat;
+            background-color: rgba(255, 245, 246, 1);
+
+            @include mq(retina) {
+                background: url(../images/about/milk-bg-left@2x.png) top 67% left 0 no-repeat, url(../images/about/milk-bg-right@2x.png) top 72% right 0 no-repeat;
             }
         }
+
+        @include mq(desktop) {
+            background: url(../images/about/milk-bg-desk-left.png) top 34% left 0 no-repeat, url(../images/about/milk-bg-desk-right.png) top 64% right 0 no-repeat;
+            background-color: rgba(255, 245, 246, 1);
+
+            @include mq(retina) {
+                background: url(../images/about/milk-bg-desk-left@2x.png) top 34% left 0 no-repeat, url(../images/about/milk-bg-desk-right@2x.png) top 64% right 0 no-repeat;
+            }
+        }
+    }
+
+    &__content {
         @include mq(tablet-only) {
             display: flex;
             align-items: center;
@@ -39,6 +39,12 @@
             align-items: start;
             justify-content: start;
         }
+    }
+
+    &__content-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &__description {
