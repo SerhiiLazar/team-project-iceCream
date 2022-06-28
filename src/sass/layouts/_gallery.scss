@@ -40,10 +40,10 @@
         width: 768px;
     }
 
-    @include mq(not-desktop) {
-    padding-left: 0;
-    padding-right: 0;
-    }
+    // @include mq(not-desktop) {
+    // padding-left: 0;
+    // padding-right: 0;
+    // }
 
     @include mq(desktop) {
         width: 1200px;
@@ -65,12 +65,12 @@
     
 }
 
-// .gallery.container {
-//     @include mq(not-desktop) {
-//     padding-left: 0;
-//     padding-right: 0;
-//     padding-bottom: 60px;
-//     }
+.gallery.container {
+    @include mq(not-desktop) {
+    padding-left: 0;
+    padding-right: 0;
+    
+    }}
     
 
 //     @include mq(desktop) {
@@ -311,6 +311,5 @@
     transform: translate(-50%, -50%) scale(1);
    
 }
-
 
 
