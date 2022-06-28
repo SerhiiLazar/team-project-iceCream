@@ -10,6 +10,8 @@
     );
 
     @include mq(tablet) {
+        padding-top: 80px;
+
         background-image: linear-gradient(
         to bottom,
         #ffffff 51%,
@@ -19,6 +21,9 @@
     }
     
     @include mq(desktop) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+
         background-image: linear-gradient(
         to bottom,
         #ffffff 28%,
@@ -29,6 +34,10 @@
     
     }
     
+}
+
+.contacts__title {
+    visibility: hidden;
 }
     
 .contacts__list {
@@ -205,10 +214,17 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 1.86;
-    
-    
-        
+   
     letter-spacing: 0.04em;
+
+    @include mq(tablet) {
+        font-size: 16px;
+    
+    }
+
+    @include mq(desktop) {
+        
+    }
 }
     
 .adress-card__title {
@@ -222,6 +238,16 @@
     
     
     letter-spacing: 0.04em;
+
+    @include mq(tablet) {
+        font-size: 14px;
+    
+    }
+
+    @include mq(desktop) {
+        font-size: 16px;
+        
+    }
 }
 
 .contacts__item:hover .adress-card__title {
@@ -239,6 +265,16 @@
     
     
     color: #907E82;
+
+    @include mq(tablet) {
+        font-size: 14px;
+    
+    }
+
+    @include mq(desktop) {
+        font-size: 16px;
+        
+    }
 }
     
 .adress-card__link {
@@ -247,15 +283,15 @@
 }
 
 .location {
-    padding-bottom: 32px;
+    margin-bottom: 32px;
     // outline: 1px solid orangered;
-    border-bottom: 1px solid #E1E1E1;
+    
 }
 
 .adress-card__schedule {
     padding-top: 32px;
     padding-bottom: 32px;
-
+    border-top: 1px solid #E1E1E1;
     border-bottom: 1px solid #E1E1E1;
 }
     
@@ -265,6 +301,16 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 1.86;
+
+    @include mq(tablet) {
+        font-size: 14px;
+    
+    }
+
+    @include mq(desktop) {
+        font-size: 16px;
+        
+    }
 }
     
 .schedule__time {
@@ -275,6 +321,16 @@
     line-height: 1.86;
     
     color: #FFA5BA;
+
+    @include mq(tablet) {
+        font-size: 14px;
+    
+    }
+
+    @include mq(desktop) {
+        font-size: 16px;
+        
+    }
 }
 
 .schedule__weekdays {
@@ -299,6 +355,16 @@
     &:focus {
         color: #D41443;
     }
+
+    @include mq(tablet) {
+        font-size: 14px;
+    
+    }
+
+    @include mq(desktop) {
+        font-size: 16px;
+        
+    }
 }
     
 .adress-card__link--mail {
@@ -315,6 +381,16 @@
     &:focus {
         color: #D41443;
     }
+
+    @include mq(tablet) {
+        font-size: 14px;
+    
+    }
+
+    @include mq(desktop) {
+        font-size: 16px;
+        
+    }
 }
 
 .cont-btn {
@@ -326,8 +402,10 @@
     align-content: center;
 
     @include mq(tablet) {
-       flex-direction: row;
-       justify-content: center;
+        margin-top: 60px;
+
+        flex-direction: row;
+        justify-content: center;
     }
 
     @include mq(desktop) {
@@ -361,11 +439,15 @@
 
     @include mq(tablet) {
         margin-right: 15px;
+        padding: 6px 32px;
+        width: 192px;
     
     }
 
     @include mq(desktop) {
-        
+        margin-right: 12px;
+        padding: 6px 36px;
+        width: 198px;
     }
 
     &:hover,
@@ -442,11 +524,11 @@
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     @include mq(tablet) {
-    
+        width: 174px;
     }
 
     @include mq(desktop) {
-        
+        width: 168px;
     }
 
     &:hover,
