@@ -1,3 +1,18 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: 767.98px) {
+        width: 100%;
+    }
+
+    @media screen and (min-width: 768px){
+        width: calc((100% - 200px));
+    }
+
+}
+
+
 .header {
     position: absolute;
     top:0;
@@ -12,7 +27,6 @@
     &__container {
 
         display: flex;
-        height: 66px;
         background-color: transparent;
 
         padding-top: 12px;
@@ -22,6 +36,20 @@
         justify-content: space-between;
 
         width: 100%;
+
+        @media screen and (min-width:768px) {
+            padding-top: 32px;
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+
+        @media screen and (min-width:1280px) {
+            padding-top: 40px;
+            padding-left: 56px;
+            padding-right: 56px;
+        }
+
+
         
 
     }
@@ -37,7 +65,17 @@
   
 
   &:hover,&:focus {transform:scale(1.1);}
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+    
+  }
     
 
 }
 
+.mobile-hidden {
+    @media screen and (max-width: 767.98px) {
+        display: none;
+    }
+}
