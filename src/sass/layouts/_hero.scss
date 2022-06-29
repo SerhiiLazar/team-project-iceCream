@@ -436,7 +436,14 @@
     }
     
     &__block {
+        
         z-index: 1;
+        @include mq(tablet-only) {
+            padding-right: 10px;
+        }
+        @include mq(desktop) {
+            padding-right: 18px;
+        }
 }
     &__item {  
         position: relative;
