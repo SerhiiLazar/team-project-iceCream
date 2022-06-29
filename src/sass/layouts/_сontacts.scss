@@ -31,10 +31,6 @@
   }
 }
 
-.contacts__title {
-  visibility: hidden;
-}
-
 .contacts__list {
   margin: -10px;
 
@@ -153,10 +149,6 @@
   @include mq(tablet) {
     margin-bottom: 32px;
   }
-
-  // @include mq(desktop) {
-
-  // }
 }
 
 .contacts__item:hover .uptitle-foodtrack {
@@ -196,10 +188,6 @@
   @include mq(tablet) {
     font-size: 16px;
   }
-
-  // @include mq(desktop) {
-
-  // }
 }
 
 .adress-card__title {
@@ -238,11 +226,6 @@
   }
 }
 
-.adress-card__link {
-  display: flex;
-  flex-direction: column;
-}
-
 .location {
   margin-bottom: 24px;
 
@@ -250,9 +233,6 @@
     margin-bottom: 32px;
   }
 
-  // @include mq(desktop) {
-
-  // }
 }
 
 .adress-card__schedule {
@@ -266,9 +246,6 @@
     padding-bottom: 32px;
   }
 
-  // @include mq(desktop) {
-
-  // }
 }
 
 .schedule__period {
@@ -304,10 +281,13 @@
 }
 
 .adress-card__link {
-  padding-top: 24px;
+  margin-top: 24px;
+
+  display: flex;
+  flex-direction: column;
 
   @include mq(tablet) {
-    padding-top: 32px;
+    margin-top: 32px;
   }
 
   // @include mq(desktop) {
@@ -373,14 +353,22 @@
     justify-content: center;
   }
 
-  // @include mq(desktop) {
-
-  // }
 }
 
 .cont-btn__locations {
-  padding: 6px 18px;
   margin-bottom: 10px;
+  @include mq(tablet) {
+    margin-bottom: 0;
+    margin-right: 15px;
+  }
+
+  @include mq(desktop) {
+
+  }
+}
+
+.cont-btn__locations--item {
+  padding: 6px 18px;
 
   width: 162px;
   height: 44px;
@@ -404,16 +392,12 @@
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @include mq(tablet) {
-    margin-bottom: 0;
-    margin-right: 15px;
     padding: 6px 32px;
-
     width: 191px;
   }
 
   @include mq(desktop) {
     padding: 6px 36px;
-
     width: 198px;
   }
 
@@ -438,7 +422,7 @@
   }
 }
 
-.cont-btn__franchise {
+.cont-btn__franchise--item {
   padding: 6px 32px;
 
   width: 162px;
