@@ -2,7 +2,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 .nav {
     display: flex;
     align-items: center;
@@ -15,9 +14,7 @@ html {
         width: calc((100% - 200px));
         
     }
-
 }
-
 
 .header {
     position: absolute;
@@ -53,8 +50,6 @@ html {
         }
     }
 
-    
-
     &__container {
 
         display: flex;
@@ -63,10 +58,7 @@ html {
         padding-top: 12px;
         padding-left: 20px;
         padding-right: 20px;
-        justify-content: space-between;
-
-       
-
+        
         width: 100%;
 
         @media screen and (min-width:768px) {
@@ -79,11 +71,8 @@ html {
             padding-top: 40px;
             padding-left: 56px;
             padding-right: 56px;
-            justify-content: space-between;
+            
         }
-
-
-        
 
     }
 }
@@ -98,6 +87,11 @@ html {
   
 
   &:hover,&:focus {transform:scale(1.1);}
+
+  @media screen and (min-width:768px) {
+   margin-right: 16px;
+    
+  }
 
   @media screen and (min-width: 1279.98px) {
     display: none;
