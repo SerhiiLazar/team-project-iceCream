@@ -28,6 +28,7 @@
         width: 90%;
         max-width: 420px;
         padding: 30px;
+        max-height: 98vh;
     }
 
     @include mq(tablet-only) {
@@ -88,7 +89,7 @@
         align-items: center;
         justify-content: center;
         width: 30px;
-        height: 30px;
+        max-height: 30px;
         padding: 0;
         cursor: pointer;
         border: 1px solid rgba(0, 0, 0, 0.1);
@@ -132,7 +133,7 @@
     &__input {
         margin: 0;
         width: 100%;
-        height: 40px;
+        max-height: 40px;
 
         padding-left: 42px;
         padding-right: 12px;
@@ -174,7 +175,7 @@
         }
 
         @include mq(tablet) {
-            width: 300px;
+            max-width: 300px;
             padding-left: 12px;
         }
     }
@@ -355,7 +356,10 @@
     &__checkbox:checked+&__custom-checkbox {
         background-color: #D41443;
         border-color: #D41443;
+    }
 
+    &__checkbox:focus + &__custom-checkbox, &__checkbox:focus-within + &__custom-checkbox{
+        outline: 1px solid #D41443;
     }
 
     &__checkbox {
