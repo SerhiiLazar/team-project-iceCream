@@ -26,13 +26,22 @@
 
     @include mq(mobile-only) {
         width: 90%;
-        max-width: 450px;
+        max-width: 420px;
         padding: 30px;
     }
 
-    @include mq(tablet) {
+    @include mq(tablet-only) {
+        width: 100%;
+        max-width: 480px;
+        max-height: 98vh;
+        padding: 30px;
+    }
+
+    @include mq(desktop) {
         width: 100%;
         max-width: 528px;
+        max-height: 98vh;
+        padding: 30px;
     }
 
     max-width: 528px;
@@ -63,7 +72,11 @@
         margin-bottom: 12px;
 
         @include mq(mobile-only) {
-            margin-bottom: 4px;
+            margin-bottom: 1px;
+        }
+
+        @include mq(tablet) {
+            margin-bottom: 5px;
         }
     }
 
@@ -127,7 +140,7 @@
         font-family: 'DM Sans';
         font-style: normal;
         font-weight: 700;
-        font-size: 15px;
+        font-size: 13px;
         line-height: 1.52;
         letter-spacing: 0.04em;
 
@@ -290,6 +303,10 @@
         @include mq(mobile-only) {
             margin-bottom: 10px;
         }
+
+        @include mq(tablet) {
+            margin-bottom: 15px;
+        }
     }
 
     &__checkbox-description {
@@ -388,6 +405,10 @@
     &__btn--checkout {
         margin-bottom: 15px;
         @include mq(mobile-only) {
+            margin-bottom: 9px;
+        }
+
+        @include mq(desktop) {
             margin-bottom: 9px;
         }
     }

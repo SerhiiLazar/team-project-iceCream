@@ -26,8 +26,8 @@
 
     @include mq(mobile-only) {
         width: 100%;
-        max-width: 280px;
-        height: 98vh;
+        max-width: 420px;
+        max-height: 98vh;
     }
 
     @include mq(tablet) {
