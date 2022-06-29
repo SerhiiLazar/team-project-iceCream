@@ -1,64 +1,59 @@
 <div class="backdrop is-hidden" data-modal5>
     <div class="modal">
-        <button class="modal-btn" data-modal-close5>
-            <svg class="modal-btn__icon-close" width="18" height="18">
+        <button class="modal__btn" data-modal-close5>
+            <svg class="modal__icon-close" width="18" height="18">
                 <use href="./images/products/svg/products.svg#icon-close-modal"></use>
             </svg>
         </button>
 
-        <strong class="modal-title">Please take a second to test</strong>
+        <strong class="modal__title">Please take a second to test</strong>
         <form class="modal-form">
             <label class="modal-form__field">
-                <span class="modal-form__label">Name</span>
-                <div class="modal-form__field-icon">
-                    <input class="modal-form__input modal-form__icon--user" type="text" name="user-name" id="user-name">
+                <span class="modal-form__label">Name</span>               
+                    <input class="modal-form__input" type="text" name="user-name" id="user-name">
                     <svg class="modal-form__icon" width="18" height="18">
                         <use href="./images/products/svg/products.svg#icon-user"></use>
-                    </svg>
-                </div>
-
-            </label>
+                    </svg>              
+                </label>
 
             <label class="modal-form__field">
-                <span class="modal-form__label">Phone</span>
-                <div class="modal-form__field-icon">
+                <span class="modal-form__label">Phone</span>                
                     <input class="modal-form__input" type="tel" name="user-phone" id="user-phone">
-                    <svg class="modal-form__icon modal-form__icon--phone" width="18" height="18">
+                    <svg class="modal-form__icon" width="18" height="18">
                         <use href="./images/products/svg/products.svg#icon-phone"></use>
-                    </svg>
-                </div>
+                    </svg>               
             </label>  
             
-            <div class="form-thumb">
+            <div class="modal-form__thumb">
                 <label class="modal-form__field">
                     <span class="modal-form__label">Choose your Products</span>
                     <select class="modal-form__input modal-form__input--product" name="Products">
                         <optgroup class="modal-form__optgroup" label="Ice Cream">
-                            <option class="modal-form__option value=" s6">Black Raspberry</option>
-                            <option class="modal-form__option value=" s7">Chocolate</option>
-                            <option class="modal-form__option value=" s8">French Vanilla</option>
-                            <option class="modal-form__option value=" s7">Rose Pistachio</option>
-                            <option class="modal-form__option value=" s8">Oreo Latte</option>
+                            <option class="modal-form__option" value="s1">Black Raspberry</option>
+                            <option class="modal-form__option" value="s2">Chocolate</option>
+                            <option class="modal-form__option" value="s3">French Vanilla</option>
+                            <option class="modal-form__option" value="s4">Rose Pistachio</option>
+                            <option class="modal-form__option" value="s5">Oreo Latte</option>
                         </optgroup>
                 
                         <optgroup class="modal-form__optgroup" label="Ice Coffee">
-                            <option class="modal-form__option value=" s6">Cold Brew</option>
-                            <option class="modal-form__option value=" s7">Iced Mocha</option>
-                            <option class="modal-form__option value=" s8">Iced Latte</option>
-                            <option class="modal-form__option value=" s7">Yogurt Coffee</option>
-                            <option class="modal-form__option value=" s8">Greek Frappe</option>
+                            <option class="modal-form__option" value="s6">Cold Brew</option>
+                            <option class="modal-form__option" value="s7">Iced Mocha</option>
+                            <option class="modal-form__option" value="s8">Iced Latte</option>
+                            <option class="modal-form__option" value="s9">Yogurt Coffee</option>
+                            <option class="modal-form__option" value="s10">Greek Frappe</option>
                 
                         <optgroup class="modal-form__optgroup" label="Milkshakes">
-                            <option class="modal-form__option value=" s6">Strawberry Shake</option>
-                            <option class="modal-form__option value=" s7">Vanilla Shake</option>
-                            <option class="modal-form__option value=" s8">Choco Mint Shake</option>
-                            <option class="modal-form__option value=" s7">Nutella Shake</option>
-                            <option class="modal-form__option value=" s8">Mango Milkshake</option>
+                            <option class="modal-form__option" value="s11">Strawberry Shake</option>
+                            <option class="modal-form__option" value="s12">Vanilla Shake</option>
+                            <option class="modal-form__option" value="s13">Choco Mint Shake</option>
+                            <option class="modal-form__option" value="s14">Nutella Shake</option>
+                            <option class="modal-form__option" value="s15">Mango Milkshake</option>
                     </select>
                 </label>
                 
                 <label class="modal-form__field">
-                    <span class="modal-form__label modal-form__label--quantiti">Qantiti</span>
+                    <span class="modal-form__label modal-form__label--quantiti">Quantiti</span>
                     <input class="modal-form__input modal-form__input--quantiti" type="number" name="weight" min="1" max="20" step="1"
                         value="1" />
                 </label>
