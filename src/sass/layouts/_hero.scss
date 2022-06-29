@@ -117,6 +117,12 @@
     }
 }
 
+.hero__link:hover,
+.hero__link:focus {
+    color: rgba(212, 20, 67, 1);
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+}
 
 .hero__link {
     
@@ -132,15 +138,27 @@
     padding: 7px 15px;
     background-color: rgba(212, 20, 67, 1);
     border-radius: 20px;
+    box-shadow:
+            0px 1px 1px rgba(0, 0, 0, 0.12),
+            0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
 
     color: #FFFFFF;
+
+    transform: scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     &--white {
         color: rgba(212, 20, 67, 1);
         background-color: rgba(255, 255, 255, 1);
     }
     &--white:hover,
     &--white:focus {
-        background-color: rgba(236, 235, 235, 1);
+        background-color: rgba(212, 20, 67, 1);
+        color: rgba(255, 255, 255, 1);
+        transform: scale(1.05);
     }
     @include mq(tablet-only) {
         padding: 7px 12px;
