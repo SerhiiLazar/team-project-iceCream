@@ -1,87 +1,107 @@
 <!-- secrion HERO -->
 <section class="hero" id="hero">
   <div class="container">
-    <div class="hero__wrapper">
-      <div class="hero__content">
-        <h1 class="hero__title">
-          ice cream made with
-          <span class="hero__title hero__title--big">passion</span>
-        </h1>
+    <div class="hero__content">
+      <h1 class="hero__title">
+        ice cream made with
+        <span class="hero__title hero__title--big">passion</span>
+      </h1>
+      <ul class="hero__list">
+        <li class="hero__item">
+          <a href="#products" class="hero__link">Products</a>
+        </li>
+        <li class="hero__item">
+          <a href="#about" class="hero__link hero__link--white">How it’s made?</a>
+        </li>
+      </ul>
+      <div class="hero__milk">
 
-        <ul class="hero__list">
-          <li class="hero__item">
-            <a href="#products" class="hero__link">Products</a>
-          </li>
-          <li class="hero__item">
-            <a href="#about" class="hero__link hero__link--white">How it’s made?</a>
-          </li>
-        </ul>
-        <div class="hero__milk">
-          <div class="hero__milk-img">
-            <picture>
-              <source media="(min-width: 1200px)" sizes="(max-width: 213px) 213px, 100vw" srcset="
-                    ./images/header/desktop/milk-ds.png 1x,
-                    ./images/header/desktop/milk-ds@2x.png 2x
-                  " type="image/png" />
-              <source media="(min-width: 768px)" sizes="(max-width: 152px) 152px, 100vw" srcset="
-                    ./images/header/tablet/milk-tb.png 1x,
-                    ./images/header/tablet/milk-tb@2x.png 2x
-                  " type="image/png" />
+        <picture class="hero__milk-img">
+          <source media="(min-width: 1200px)" srcset="
+              ./images/header/desktop/milk-ds.png 1x,
+              ./images/header/desktop/milk-ds@2x.png 2x
+              " type="image/png" />
+          <source media="(min-width: 768px)" srcset="
+              ./images/header/tablet/milk-tb.png 1x,
+              ./images/header/tablet/milk-tb@2x.png 2x
+              " type="image/png" />
 
-              <img class="hero__milk-images" src="./images/header/tablet/milk-tb.png" alt="ice" width="152"
-                height="154" />
-            </picture>
-          </div>
+          <img class="hero__milk-images" src="./images/header/tablet/milk-tb.png" alt="ice" width="152" height="154"
+            loading="lazy" />
+        </picture>
+        <div class="milk-container__wrapper">
           <div class="hero__milk-container milk-container">
             <p class="milk-container__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               tempor incididunt ut labore et</p>
-            <button class="milk-container__link" type="button">
+            <button class="milk-container__link" type="button" data-modal-open2>
               <svg class="milk-container__svg" width="15px" height="15px">
                 <use href="./images/header/header-sprite.svg#icon-arrow-right2"></use>
               </svg>
             </button>
           </div>
+          <div class="milk-container  milk-container--slic is-hidden2" data-modal2>
+            <p class="milk-container__text close">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod
+              tempor incididunt ut labore et</p>
+            <button class="milk-container__link milk-container__link--close is-hidden2" type="button" data-modal-close2>
+              <svg class="milk-container__svg" width="15px" height="15px">
+                <use href="./images/header/header-sprite.svg#icon-arrow-left2"></use>
+              </svg>
+            </button>
+          </div>
         </div>
+
       </div>
+    </div>
+    <div class="hero__ice-block">
       <div class="hero__eclipse">
         <picture>
-          <source media="(min-width: 1280px)" sizes="(max-width: 236px) 236px, 100vw" srcset="
-                ./images/header/desktop/ice-ds.png 1x,
-                ./images/header/desktop/ice-ds@2x.png 2x
-              " type="image/png" />
-          <source media="(min-width: 768px)" sizes="(max-width: 143px) 143px, 100vw" srcset="
-                ./images/header/tablet/ice-tb.png 1x,
-                ./images/header/tablet/ice-tb@2x.png 2x
-              " type="image/png" />
-          <source media="(min-width: 320px)" sizes="(max-width: 171px) 171px, 100vw" srcset="
-                ./images/header/mobail/ice-mb.png 1x,
-                ./images/header/mobail/ice-mb@2x.png 2x
-              " type="image/png" />
+
+          <source media="(min-width: 1280px)" srcset="
+            ./images/header/desktop/ice-ds.png 1x,
+            ./images/header/desktop/ice-ds@2x.png 2x
+            " type="image/png" />
+
+          <source media="(min-width: 768px)" srcset="
+            ./images/header/tablet/ice-tb.png 1x,
+            ./images/header/tablet/ice-tb@2x.png 2x
+            " type="image/png" />
+
+          <source media="(min-width: 320px)" srcset="
+            ./images/header/mobail/ice-mb.png 1x,
+            ./images/header/mobail/ice-mb@2x.png 2x
+            " type="image/png" />
+
           <img class="hero__images hero__images--ice" src="./images/header/mobail/ice-mb.png" alt="ice" width="171"
-            height="410" />
+            height="410" loading="lazy" />
         </picture>
+
       </div>
-      <div class="hero__store-branches store">
-        <div class="store__block">
-          <span>16</span>
-          <p>cafes</p>
-        </div>
-        <div class="store__block store__block--trucks">
-          <span>23</span>
-          <p>food trucks</p>
-        </div>
-          <picture>
-            <source media="(min-width: 1200px)" sizes="(max-width: 304px) 304px, 100vw" srcset="
-                  ./images/header/desktop/testy-ds.png 1x,
-                  ./images/header/desktop/testy-ds@2x.png 2x
-                " type="image/png" />
-            <source media="(min-width: 768px)" sizes="(max-width: 190px) 190px, 100vw" srcset="
-                  ./images/header/tablet/testy-tb.png 1x,
-                  ./images/header/tablet/testy-tb@2x.png 2x
-                " type="image/png" />
-            <img class="store__testy" src="./images/header/tablet/testy-tb.png" alt="ice" width="190" height="150" />
-          </picture>
-        </div>
+
+    </div>
+    <div class="hero__store-branches store">
+      <ul class="store__block">
+        <li class="store__item">
+          <p class="store__paragraph"><span class="store__paragraph store__paragraph--big">23</span>food trucks</p>
+        </li>
+        <li class="store__item">
+          <p class="store__paragraph"><span class="store__paragraph store__paragraph--big">16</span>cafes</p>
+        </li>
+      </ul>
+      <picture>
+
+        <source media="(min-width: 1200px)" srcset="
+          ./images/header/desktop/testy-ds.png 1x,
+          ./images/header/desktop/testy-ds@2x.png 2x
+          " type="image/png" />
+
+        <source media="(min-width: 768px)" srcset="
+          ./images/header/tablet/testy-tb.png 1x,
+          ./images/header/tablet/testy-tb@2x.png 2x
+          " type="image/png" />
+        <img class="store__testy" src="./images/header/tablet/testy-tb.png" alt="ice" width="190" height="150"
+          loading="lazy" />
+      </picture>
     </div>
   </div>
 </section>
