@@ -1,6 +1,6 @@
 (() => {
   const refs = {
-    scrollUpButton: document.querySelector("[scroll-up-btn]"),
+    scrollUpButton: document.querySelector("[data-up-btn]"),
   };
 
   refs.scrollUpButton.addEventListener("click", topFunction);
