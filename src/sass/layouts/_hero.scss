@@ -4,17 +4,16 @@
     overflow: hidden;
 }
 .hero__wrapper {
-    max-width: 320px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 83px;
     padding-bottom: 75px;
+    position: relative;
 
     z-index: 15;
     @include mq(tablet-only) {
         display: flex;
         justify-content: space-between;
-        max-width: 768px;
         margin: 0 auto;
         padding-top: 43px;
         padding-bottom: 40px;
@@ -22,7 +21,6 @@
     @include mq(desktop) {
         display: flex;
         justify-content: space-between;
-        max-width: 1280px;
         padding-top: 54px;
         padding-bottom: 76px;
     }
@@ -38,23 +36,27 @@
 }
 
 .hero__content {
-    width: 218px;
+    max-width: 218px;
     position: absolute;
     z-index: 15;
+
+    
     padding-top: 111px;
     padding-bottom: 83px;
 
     @include mq(tablet-only) {
-        width: 162px;
+        max-width: 162px;
         position: static;
+        margin-right: 54px;
         padding-top: 65px;
         padding-bottom: 0;
         position: relative;
     }
     @include mq(desktop) {
         position: static;
-        width: 277px;
+        max-width: 277px;
         padding-top: 93px;
+        margin-right: 0;
         
     }
 }
@@ -222,7 +224,9 @@
 
         color: rgba(255, 255, 255, 1);
     @include mq(desktop) {
+        font-weight: 400;
         font-size: 14px;
+        line-height: 1.4;
     }
     }
 
@@ -235,7 +239,13 @@
         height: 18px;
         background-color: rgba(255, 255, 255, 1);
         border-radius: 50%;
+        cursor: pointer;
+    @include mq(desktop) {
+        width: 26px;
+        height: 26px;
+    }
     } 
+
     &__svg {
         
         fill: rgba(212, 20, 67, 1);
@@ -261,11 +271,14 @@
     @include mq(tablet-only) {
         width: 335px;
         height: 333px;
+        margin-right: auto;
         margin-left: 0;
     }
     @include mq(desktop) {
         width: 534px;
         height: 534px;
+        margin-left: auto;
+        margin-right: 41px;
     }
 }
 
@@ -322,12 +335,13 @@
 
 .store {
     display: none;
+    
 
     @include mq(tablet-only) {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        position: relative;
+        
 
         padding-top: 49px;
     }
@@ -335,21 +349,22 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        position: relative;
+        
 
         padding-top: 98px;
 
+
     }
+    
     &__block {
-        width: 43px;
-        height: 44px;
         text-align: end;
         position: relative;
-
         z-index: 1;
 
         &:nth-child(1) {
             margin-bottom: 16px;
+        
+         
         }
 
         &::after {
@@ -364,11 +379,14 @@
 
             border-radius: 50%;
             background-color:rgba(255, 255, 255, 1);
+        @include mq(desktop) {
+            width: 30px;
+            height: 30px;
+            right: -18;
+            top: -4;
         }
-    }
-    &__block--trucks {
-        width: 51px;
-        height: 43px;
+        }
+
     }
     &__block>span {
         font-family: 'Titan One';
@@ -382,6 +400,10 @@
 
         color: rgba(212, 20, 67, 1);
 
+        @include mq(desktop) {
+            font-size: 46px;
+            line-height: 1.15;
+        }
     }
 
     &__block>p {
@@ -393,15 +415,33 @@
 
         color: rgba(255, 255, 255, 1);
 
+        @include mq(desktop) {
+            font-size: 14px;
+            line-height: 1.28;
+        }
 
     }
-    &__images {
-        position: absolute;
+
+    
+    // &__images {
+       
+    // }
+}
+.store__testy {
+    width: 190px;
+    height: 150px;
+    right: 0;
+    z-index: 16;
+    bottom: 1;
+    
+    position: absolute;
+    
+    
+    @include mq(desktop) {
+        width: 304px;
+        height: 241px;
+        bottom: 0;
         right: 0;
-        z-index: 16;
-        bottom: -40px;
-        width: 190px;
-        height: 150px;
     }
 }
 
