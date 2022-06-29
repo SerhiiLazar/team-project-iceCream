@@ -239,12 +239,25 @@
         height: 18px;
         background-color: rgba(255, 255, 255, 1);
         border-radius: 50%;
+
+        box-shadow:
+                0px 1px 1px rgba(0, 0, 0, 0.12),
+                0px 4px 4px rgba(0, 0, 0, 0.06),
+                1px 4px 6px rgba(0, 0, 0, 0.16);
         cursor: pointer;
-    @include mq(desktop) {
-        width: 26px;
-        height: 26px;
-    }
+        transform: scale(1);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        @include mq(desktop) {
+            width: 26px;
+            height: 26px;
+        }
     } 
+
+    &__link:hover,
+    &__link:focus {
+        transform: scale(1.2);
+    }
 
     &__svg {
         
