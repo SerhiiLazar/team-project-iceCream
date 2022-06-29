@@ -1,47 +1,146 @@
 <section class="customer container">
-  <article class="swiper">
-    <div class="customer__madia">
-      <div class="img customer__img">
-        <picture>
-          <source
-            media="(min-width: 1200px)"
-            srcset="
-              ./images/customer/testimonials1_lg.jpg   1x,
-              ./images/customer/testimonials@2x_lg.jpg 2x
-            "
-            type="image/jpg"
-          />
-          <source
-            media="(min-width: 768px)"
-            srcset="
-              ./images/customer/testimonials1_md.jpg   1x,
-              ./images/customer/testimonials@2x_md.jpg 2x
-            "
-            type="image/jpg"
-          />
-          <source
-            media="(max-width: 767px)"
-            srcset="
-              ./images/customer/testimonials1_sm.jpg   1x,
-              ./images/customer/testimonials@2x_sm.jpg 2x
-            "
-            type="image/jpg"
-          />
-          <img
-            src="./images/customer/testimonials1_sm.jpg"
-            alt="фото"
-            loading="lazy"
-          />
-        </picture>
+  <h2 class="title">Отзывы</h2>
+  <article class="customer__comments">
+    <h3 class="title">Отзывы</h3>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="customer__madia">
+            <div class="img customer__img">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/customer/testimonials1_lg.jpg   1x,
+                    ./images/customer/testimonials@2x_lg.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/customer/testimonials1_md.jpg   1x,
+                    ./images/customer/testimonials@2x_md.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/customer/testimonials1_sm.jpg   1x,
+                    ./images/customer/testimonials@2x_sm.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <img
+                  src="./images/customer/testimonials@2x_sm.jpg"
+                  alt="фото"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="customer__text">
+              <p class="customer__text--style">
+                A pleasant store, a large assortment of delicious ice cream,
+                managers are real professionals !!! O,special thanks to the
+                consultant for the help, as well as for a small gift :)
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="customer__madia">
+            <div class="img customer__img">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/customer/testimonials1_lg.jpg   1x,
+                    ./images/customer/testimonials@2x_lg.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/customer/testimonials1_md.jpg   1x,
+                    ./images/customer/testimonials@2x_md.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/customer/testimonials1_sm.jpg   1x,
+                    ./images/customer/testimonials@2x_sm.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/customer/testimonials@2x_sm.jpg"
+                  alt="фото"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="customer__text">
+              <p class="customer__text--style">
+                I was, however, upset when the cup was empty. The dishes were
+                great and they were creamy. The portions were excellent and the
+                prices were very good.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="customer__madia">
+            <div class="img customer__img">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/customer/testimonials1_lg.jpg   1x,
+                    ./images/customer/testimonials@2x_lg.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/customer/testimonials1_md.jpg    1x,
+                    .//images/customer/testimonials@2x_md.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/customer/testimonials1_sm.jpg   1x,
+                    ./images/customer/testimonials@2x_sm.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/customer/testimonials@2x_sm.jpg"
+                  alt="фото"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="customer__text">
+              <p class="customer__text--style">
+                The ice cream was amazing with a wide selection of classic and
+                exotic flavors. It is within walking distance of the Trevi
+                Fountain and has reasonable pricings.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="customer__text">
-        <p class="customer__text--style">
-          A pleasant store, a large assortment of delicious ice cream, managers
-          are real professionals !!! O,special thanks to the consultant for the
-          help, as well as for a small gift :)
-        </p>
-      </div>
+      <div class="swiper-pagination"></div>
     </div>
+
     <div class="customer__icon">
       <p class="customer__icon-name">Emily, Los Angeles</p>
       <div class="customer__icon__svg">
@@ -50,6 +149,7 @@
             <svg class="icon" width="12" height="12">
               <use
                 href="./images/customer/cust_spritesvg/symbol-defs.svg#icon-house"
+                href=""
               ></use>
             </svg>
           </li>
@@ -72,146 +172,5 @@
     </div>
   </article>
 </section>
-<!-- <article class="swiper">
-    <div class="customer__madia">
-      <div class="img customer__img">
-                <picture>
-          <source
-            media="(max-width :767px)"
-            srcset="
-              ./images/customer/custgirl/testimonials1.png,
-              ./images/customer/custgirl/testimonials1@2x.png
-            "
-          />
-        </picture>
-        <img src="./images/customer/custgirl/testimonials1.png" alt="" />
-      </div>
-      <div class="customer__text">
-        <svg class="icon__untitled" width="54" height="40">
-          <use
-            href="./images/customer/cust_spritesvg/symbol-defs.svg#icon-untitled"
-          ></use>
-        </svg>
-        <div class="customer__text--link">
-          <p class="customer__text--style">
-            Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
-            Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
-            ipsum primis in nibh vel risus.
-          </p>
-        </div>
-      </div>
-      <div class="customer__icon">
-        <span class="customer__icon-name">Emily, Los Angeles</span>
-        <div class="customer__icon__svg">
-          <ul class="customer__icon--page">
-            <li class="customer__link">
-              <svg class="icon" width="12" height="12">
-                <use
-                  href="./images/customer/cust_spritesvg/symbol-defs.svg#icon-house"
-                ></use>
-              </svg>
-            </li>
-            <li class="customer__link">
-              <svg class="icon" width="12" height="12">
-                <use
-                  href="./images/customer/cust_spritesvg/symbol-defs.svg#icon-Ellipse-7"
-                ></use>
-              </svg>
-            </li>
-            <li class="customer__link">
-              <svg class="icon" width="12" height="12">
-                <use
-                  href="./images/customer/cust_spritesvg/symbol-defs.svg#icon-Ellipse-8"
-                ></use>
-              </svg>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </article> -->
-<!-- <article class="swiper">
-    <div class="customer__madia">
-      <div class="img customer__img">
-         <picture>
-          <source
-            media="(max-width :767px)"
-            srcset="
-              ./src/images/customer/custgirl/testimonials1.png    1x,
-              ./src/images/customer/custgirl/testimonials1@2x.png 2x
-            "
-          />
-        </picture>
-        <img src="./images/customer/custgirl/testimonials1.png" alt="фото" />
-        </picture>
-        <img src="./src/images/customer/custgirl/testimonials1.png" alt="фото" />
-      </div>
-      <div class="customer__text">
-        <svg class="icon__untitled" width="54" height="40">
-          <use
-            href="./images/customer/cust_spritesvg/symbol-defs.svg#icon-untitled"
-          ></use>
-        </svg>
-        <div class="customer__text--link">
-          <p class="customer__text--style">
-            Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
-            Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
-            ipsum primis in nibh vel risus.
-          </p>
-        </div>
-      </div>
-      <div class="customer__icon">
-        <span class="customer__icon-name">Emily, Los Angeles</span>
-        <div class="customer__icon__svg">
-          <ul class="customer__icon--page">
-            <li class="customer__link">
-              <svg class="icon" width="12" height="12">
-                <use
-                  href="./images/customer/cust_spritesvg/symbol-defs.svg#icon-house"
-                ></use>
-              </svg>
-            </li>
-            <li class="customer__link">
-              <svg class="icon" width="12" height="12">
-                <use
-                  href="./images/customer/cust_spritesvg/symbol-defs.svg#icon-Ellipse-7"
-                ></use>
-              </svg>
-            </li>
-            <li class="customer__link">
-              <svg class="icon" width="12" height="12">
-                <use
-                  href="./images/customer/cust_spritesvg/symbol-defs.svg#icon-Ellipse-8"
-                ></use>
-              </svg>
-            </li>
-          </ul>
-        </div>
-=======
-        <ul class="customer__icon--page">
-          <li class="customer__link">
-            <svg class="icon" width="12" height="12">
-              <use
-                href="./images/customer/cust_spritesvg/symbol-defs.svg#icon-house"
-              ></use>
-            </svg>
-          </li>
-          <li class="customer__link">
-            <svg class="icon" width="12" height="12">
-              <use
-                href="./images/customer/cust_spritesvg/symbol-defs.svg#icon-Ellipse-7"
-              ></use>
-            </svg>
-          </li>
-          <li class="customer__link">
-            <svg class="icon" width="12" height="12">
-              <use
-                href="./images/customer/cust_spritesvg/symbol-defs.svg#icon-Ellipse-8"
-              ></use>
-            </svg>
-          </li>
-        </ul>
->>>>>>> refs/remotes/origin/main
-      </div>
-    </div>
-  </article>  -->
+
+<script type="module" src="./js/main.js"></script>
