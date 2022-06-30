@@ -284,7 +284,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     &__checkbox-description {
@@ -346,7 +346,7 @@
         appearance: none
     }
 
-    &__link {
+    &__policy {
         color: #D41443;
     }
 
@@ -381,7 +381,9 @@
     }
 
     &__btn--checkout {
-        margin-bottom: 15px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;        
     }
 
     &__btn--continue {
