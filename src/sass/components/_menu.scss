@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
 
-  width: 100vw;
+  width: 250px;
   height: 100vh;
   background-color: rgba(225, 121, 146, 1);
   z-index: 99;
@@ -17,9 +17,8 @@
   padding-top: 20px;
 
   @media screen and (min-width:768px) {
-    width: 254px;
-    
-}
+    width: calc((100% - 380px) / 2)
+    }
 
   &__buy-btn {
     display: flex;
@@ -61,14 +60,19 @@
   }
 
   &__buy-btn_menu{
-    width: 209px;
+    width: calc(100% - 40px);
     margin-bottom: 19px;
   
   }
-  &__buy-btn_hero {
-    width: 159px;
+  &__buy-btn_header {
+    @media screen and (min-width:768px)
+    {width: 205px;}
+    @media screen and (min-width: 1200px)
+      {width: 184px;}
+      
+    }
     
-  }
+  
   &__item {
     display: flex;
     height: 42px;

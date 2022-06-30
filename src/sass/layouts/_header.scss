@@ -5,13 +5,13 @@ html {
 .nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     @media screen and (max-width: 767.98px) {
         width: 100%;
     }
 
     @media screen and (min-width: 768px){
-        width: calc((100% - 200px));
+        width: 100%;
         
     }
 }
@@ -25,29 +25,42 @@ html {
     width: 100%;
     z-index: 50;
 
-    &__nav {
+    &__logo-link {
+        
+        @media screen and (min-width: 320px){
+        margin-right: 61px;}
+        @media screen and (min-width: 768px){
+        margin-right: 293px;}
+        @media screen and (min-width: 1200px){
+        margin-right: 128px;}
+}
+
+    &__list {
         display: flex;
-        flex-grow: 1;
+        width: 541px;
         justify-content: space-between;
         
 
-        @media screen and (max-width: 1279.98px) {
+        @media screen and (max-width: 1199.98px) {
             display: none;
           }
-        @media screen and (min-width:1280px) {
-            padding-right: 141px;
-            padding-left: 128px;
+        @media screen and (min-width:1200px) {
             
         }  
         
-          &-link {
+          &-item {
         font-size: 16px;
         color: rgba(255, 255, 255, 1);
            &:hover,&focus {color: rgba(212, 20, 67, 1);
             cursor: pointer;
-           
           }
         }
+          &-link {
+            
+            padding-top: 20px;
+            padding-bottom: 20px;
+          }
+        
     }
 
     &__container {
@@ -58,20 +71,20 @@ html {
         padding-top: 12px;
         padding-left: 20px;
         padding-right: 20px;
+
+        justify-content: space-between;
         
-        width: 100%;
+        
 
         @media screen and (min-width:768px) {
-            padding-top: 32px;
-            padding-left: 32px;
-            padding-right: 32px;
+            padding: 32px;
         }
 
-        @media screen and (min-width:1280px) {
+        @media screen and (min-width:1200px) {
             padding-top: 40px;
-            padding-left: 56px;
             padding-right: 56px;
-            
+            padding-bottom: 40px;
+            padding-left: 56px;
         }
 
     }
@@ -88,12 +101,9 @@ html {
 
   &:hover,&:focus {transform:scale(1.1);}
 
-  @media screen and (min-width:768px) {
-   margin-right: 16px;
-    
-  }
+  
 
-  @media screen and (min-width: 1279.98px) {
+  @media screen and (min-width: 1199.98px) {
     display: none;
   }
     
