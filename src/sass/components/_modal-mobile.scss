@@ -37,7 +37,7 @@
     }
 
     max-width: 528px;
-    padding: 40px;
+    padding: 30px;
 
     background-color: #FFA5BA;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -247,6 +247,10 @@
     &__textarea {
         display: block;
         margin-bottom: 20px;
+
+        @include mq(mobile-only) {
+                margin-bottom: 0px;
+            }
     }
 
     &__comment {
@@ -284,7 +288,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     &__checkbox-description {
@@ -346,13 +350,8 @@
         appearance: none
     }
 
-    &__link {
+    &__policy {
         color: #D41443;
-    }
-
-    &__field-btn {
-        display: flex;
-        justify-content: center;
     }
 
     &__btn {
@@ -386,7 +385,9 @@
     }
 
     &__btn--checkout {
-        margin-bottom: 15px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;        
     }
 
     &__btn--continue {
