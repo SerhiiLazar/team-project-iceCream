@@ -124,9 +124,11 @@
             max-width: 368px;
         }
 
-        box-shadow: 0px 11px 10px -9px rgba(161, 159, 159, 1);
-        -webkit-box-shadow: 0px 11px 10px -9px rgba(161, 159, 159, 1);
-        -moz-box-shadow: 0px 11px 10px -9px rgba(161, 159, 159, 1);
+                 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+                 0px 4px 4px rgba(0, 0, 0, 0.06),
+                 1px 4px 6px rgba(0, 0, 0, 0.16);
+
+       
     }  
     
     &__item:not(:last-child) {
@@ -379,9 +381,7 @@
 
 .price {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    
     position: absolute;
 
     overflow: hidden;
@@ -389,16 +389,16 @@
     bottom: 0px;
 
     width: 100%;
-    height: 329px;
+   
 
     padding-top: 0px;
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 40px;
-    border-radius: 24px;
+    border-radius: 24px;    
 
     @include mq(tablet) {
-        height: 355px;
+        
 
         padding-left: 25px;
         padding-right: 25px;
@@ -406,11 +406,15 @@
     }
 
     @include mq(desktop) {
-        height: 370px;
+       
 
         padding-left: 63px;
         padding-right: 63px;
         padding-bottom: 60px;
+    }
+
+    &__button {
+        margin-top: 32px;
     }
 
     &__item {
@@ -460,6 +464,12 @@
     &__title {
         display: block;
 
+        margin-bottom: 30px;
+
+        @include mq(tablet) {
+                margin-bottom: 50px;
+            }
+
         font-family: 'Titan One';
         font-style: normal;
         font-weight: 400;
@@ -474,7 +484,7 @@
         @include mq(desktop) {
             font-size: 30px;
             line-height: 1.15;
-        }
+        }       
     }
 }
 
@@ -546,7 +556,7 @@
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
         opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    &.is-hidden2 {
+    &.is-hidden {
         opacity: 0;
         transform: translateX(-100%);
     }
@@ -559,7 +569,7 @@
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
         opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    &.is-hidden3 {
+    &.is-hidden {
         opacity: 0;
         transform: translateX(-100%);
     }
