@@ -7,6 +7,10 @@
     width: auto;
     padding-bottom: 10px;
 
+    @include mq(mobile) {
+      max-width: 320px;
+    }
+
     @include mq(tablet) {
       padding-left: 16px;
       padding-right: 16px;
