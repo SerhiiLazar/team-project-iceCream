@@ -6,6 +6,7 @@
   &__container {
     width: auto;
     padding-bottom: 10px;
+    max-width: 1200px;
 
     @include mq(tablet) {
       padding-left: 16px;
