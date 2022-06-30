@@ -25,17 +25,26 @@
     left: 50%;
 
     @include mq(mobile-only) {
-        width: 90%;
-        max-width: 450px;
-    }
-
-    @include mq(tablet) {
         width: 100%;
-        max-width: 528px;
+        max-width: 450px;
+        max-height: 98%;
     }
 
+    @include mq(tablet-only) {
+        width: 100%;
+        max-width: 480px;
+        max-height: 98vh;
+    }
+
+        max-width: 528px;
+        padding: 30px;
+
+    @include mq(desktop){
     max-width: 528px;
-    padding: 40px;
+    width: 100%;
+    padding: 30px;
+    max-height: 98vh;
+    }
 
     background-color: #FFA5BA;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -69,8 +78,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 30px;
-        height: 30px;
+        width: 100%;
+        height: 100%;
+        max-width: 30px;
+        max-height: 30px;
         padding: 0;
         cursor: pointer;
         border: 1px solid rgba(0, 0, 0, 0.1);
@@ -156,7 +167,7 @@
         }
 
         @include mq(tablet) {
-            width: 300px;
+            max-width: 300px;
             padding-left: 12px;
         }
     }
@@ -243,6 +254,10 @@
     &__textarea {
         display: block;
         margin-bottom: 20px;
+
+        @include mq(mobile-only) {
+            margin-bottom: 0px;
+        }
     }
 
     &__comment {
@@ -280,7 +295,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     &__checkbox-description {
@@ -329,7 +344,10 @@
     &__checkbox:checked+&__custom-checkbox {
         background-color: #D41443;
         border-color: #D41443;
+    }
 
+    &__checkbox:focus + &__custom-checkbox, &__checkbox:focus-within + &__custom-checkbox{
+        outline: 1px solid #D41443;
     }
 
     &__checkbox {
@@ -339,14 +357,10 @@
         appearance: none
     }
 
-    &__link {
+    &__policy {
         color: #D41443;
     }
 
-    &__field-btn {
-        display: flex;
-        justify-content: center;
-    }
 
     &__btn {
         width: 200px;
@@ -377,7 +391,9 @@
     }
 
     &__btn--checkout {
-        margin-bottom: 15px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;        
     }
 
     &__btn--continue {
