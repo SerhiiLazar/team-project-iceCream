@@ -28,12 +28,14 @@
         width: 90%;
         max-width: 420px;
         max-height: 98%;
+        padding-top: 35px;
     }
 
     @include mq(tablet) {
         width: 100%;
         max-width: 528px;
         max-height: 98vh;
+        padding: 30px
     }
 
     max-width: 528px;
@@ -54,6 +56,9 @@
         font-style: normal;
         font-weight: 400;
         font-size: 20px;
+        @include mq (mobile-only) {
+                font-size: 16px;
+            }
         line-height: 1.1;
         text-align: center;
         letter-spacing: 0.04em;
