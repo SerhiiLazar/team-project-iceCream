@@ -199,7 +199,7 @@
 }
 
 .milk-container__wrapper {
-    padding-top: 41px;
+    padding-top: 55px;
     width: 114px;
 
     position: relative;
@@ -222,7 +222,11 @@
 
         color: rgba(255, 255, 255, 1);
     &.close {
-        margin-bottom: 0;
+        margin-bottom: 25px;
+        @include mq(tablet-only) {
+            margin-bottom: 5px;
+        }
+        
         text-align: center;
         color: rgba(212, 20, 67, 1);
     }
@@ -306,7 +310,7 @@
     @include mq(desktop) {
         width: 230px;
         height: 230px;
-        padding: 40px;
+        padding: 45px;
         bottom: -32px;
         left: -30px;
         
