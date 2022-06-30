@@ -36,10 +36,13 @@
         max-height: 98vh;
     }
 
+        max-width: 528px;
+        padding: 30px;
+
     @include mq(desktop){
     max-width: 528px;
     width: 100%;
-    padding: 40px;
+    padding: 30px;
     max-height: 98vh;
     }
 
