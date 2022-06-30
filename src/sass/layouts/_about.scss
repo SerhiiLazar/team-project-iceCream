@@ -15,6 +15,7 @@
 
             @include mq(retina) {
                 background: url(../images/about/milk-bg-left@2x.png) top 596px left 0 no-repeat, url(../images/about/milk-bg-right@2x.png) top 600px right 0 no-repeat;
+                background-color: rgba(255, 245, 246, 1);
             }
         }
 
@@ -24,6 +25,8 @@
 
             @include mq(retina) {
                 background: url(../images/about/milk-bg-desk-left@2x.png) top 260px left 0 no-repeat, url(../images/about/milk-bg-desk-right@2x.png) top 280px right 0 no-repeat;
+                background-color: rgba(255, 245, 246, 1);
+                background-size: 20%;
             }
         }
     }
@@ -139,6 +142,7 @@
         width: 336px;
         height: 335px;
         margin-right: 32px;
+        background-size: contain;
 
         background-image: url(../images/about/cow_336.png);
         background-position: center;
