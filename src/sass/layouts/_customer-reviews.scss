@@ -6,7 +6,9 @@
     flex-direction: column;
   }
 }
-
+.title{
+  visibility: hidden;
+}
 .customer__madia {
   display: flex;
   flex-direction: column;
@@ -15,6 +17,7 @@
 }
 
 .customer__img {
+
   @include mq(mobile-only) {
     margin-bottom: 32px;
   }
@@ -27,7 +30,11 @@
     margin-bottom: 16px;
   }
 }
-
+// .image{
+//   display: block;
+//   max-width: 100%;
+//   border-radius: 50%;
+// }
 .customer__text {
   position: relative;
 
@@ -161,8 +168,21 @@
 .customer__link {
   display: inline-block;
   margin-right: 18px;
+  cursor: pointer;
+  
 
   &:last-child {
     margin-right: 0;
   }
 }
+// .swiper {
+//   width: 100%;
+//   height: 100%;
+// }
+
+// .swiper-pagination-clickable .swiper-pagination-bullet{
+//   width: 6px;
+//   height: 6px;
+//   background-color: #d31342;
+//   cursor: pointer;
+// }
