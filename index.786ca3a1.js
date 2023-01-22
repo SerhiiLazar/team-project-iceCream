@@ -1,0 +1,2 @@
+(()=>{const o={scrollUpButton:document.querySelector("[data-up-btn]")};o.scrollUpButton.addEventListener("click",(function(){document.body.scrollTop=0,o.scrollUpButton.style.display="none",document.documentElement.scrollTop=0})),window.onscroll=function(){document.documentElement.scrollTop>50?o.scrollUpButton.style.display="block":o.scrollUpButton.style.display="none"}})();
+//# sourceMappingURL=index.786ca3a1.js.map

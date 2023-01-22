@@ -1,0 +1,2 @@
+function readMore(){var e=document.getElementById("dots"),t=document.getElementById("more"),n=document.getElementById("btn"),a=document.getElementById("btnhide");"none"===e.style.display?(e.style.display="inline",t.style.display="none",n.className="about-button",a.className="about-button--hide"):(e.style.display="none",n.className="about-button about-button--hidden",a.className="about-button--hide about-button--hide--appear",t.style.display="inline")}
+//# sourceMappingURL=index.2b688b50.js.map
